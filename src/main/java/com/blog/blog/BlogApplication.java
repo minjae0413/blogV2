@@ -12,7 +12,7 @@ public class BlogApplication {
 
 	@RequestMapping("/blog")
 	String home() {
-		return "index";
+		return "index1";
 	}
 
 	public static void main(String[] args) {
