@@ -1,36 +1,14 @@
-version: '3'
+version: "3"
 services:
-  db:
-    image: jomin0413/mysql:latest
-    container_name: mysql
-    restart: always
+  web:
+    image: nginx
     ports:
-      - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: hackers1234!
-      TZ: Asia/Seoul
-    volumes:
-      - ./db/mysql/data:/var/lib/mysql
-      - ./db/mysql/init:/docker-entrypoint-initdb.d
-    platform: linux/x86_64
-  application:
-    container_name: springio
-    image: jomin0413/springio:latest
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    ports:
-      - 9090:9090
-    volumes:
-      - ./blogV2-master:/blogV2-master
-    working_dir: /blogV2-master
-    command: [“./gradlew”, “bootrun”]
-    environment:
-      MYSQL_HOST: db
+      - 80:80
+  volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
-      - db
-    networks:
-      - spring-network
-
-networks:
-  spring-network:
+      - blog
+  spring:
+    build: .
+    ports:
+      - 8080:8080

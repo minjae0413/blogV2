@@ -1,3 +1,9 @@
+#### 20230813 (일)
+- 인텔리제이 IDEA로 개발환경 셋팅 완료.
+- 개발 환경 셋팅 방법(google시트 URL) : https://docs.google.com/presentation/d/1U_-fSJ4-w8o0ZZiOBehxa7M8ts9lmBgeeLnCcCZZQK4/edit#slide=id.p
+
+
+
 #### 20230812 (토)
 - react 설치 완료
 ````
@@ -9,7 +15,7 @@ index.js 수정하면 됨...
 
 #### 20230810 (목)
 
-- 도커 세팅 및 mysql 서버 세팅 작업함.
+- 도커 세팅 및 mysql 서버 세팅 작업함. (개발자만 설정 필요...)
 ````
 도커 세팅 방법
 1, 도커 데스크탑 설치.

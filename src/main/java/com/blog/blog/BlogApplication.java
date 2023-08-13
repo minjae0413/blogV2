@@ -14,7 +14,7 @@ public class BlogApplication {
 
 	@RequestMapping("/blog")
 	String home() {
-		return "index1";
+		return "index1111";
 	}
 
 	public static void main(String[] args) {

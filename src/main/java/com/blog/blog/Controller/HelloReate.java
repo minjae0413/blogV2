@@ -1,5 +1,3 @@
-// src/main/java/com.demogroup.demoweb/Controller/HelloWorldController.java
-
 package com.blog.blog.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
