@@ -1,3 +1,24 @@
+#### 20230814(화)
+- react-typescript 설치 완료
+````
+기존과 같은 경로에 설치함. 다만, client 폴더가 추가됨.
+리액트 : http://localhost:3000/api/hello 포트가 보이면 된거임.
+````
+- 인텔리제이 Sass(Scss) 사용 방법 : https://hagohobby.tistory.com/12 (인텔리제이 내부 설정 필요.)
+
+- 로컬 서버 여는 방법 공유.
+````
+인텔리제이 IDEA > BlogApplication Controller start > http://localhost:9090/blog 접속 (index 문구가 나오면 성공)
+````
+
+- react 로컬 여는 방법 공유.
+````
+1. 터미널 오픈 경로 작업폴더\src\main\frontend 이동 (cd 명령어 사용.)
+2. npm start (안 될 경우, npm stop 후 입력.)
+3. localhost:3000/api/hello 접속 > react 이미지 및 서버 포트 및 react 포트 나오면 정상 접속한 것임.
+````
+
+
 #### 20230813 (일)
 - 인텔리제이 IDEA로 개발환경 셋팅 완료.
 - 개발 환경 셋팅 방법(google시트 URL) : https://docs.google.com/presentation/d/1U_-fSJ4-w8o0ZZiOBehxa7M8ts9lmBgeeLnCcCZZQK4/edit#slide=id.p
