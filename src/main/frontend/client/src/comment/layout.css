@@ -1,0 +1,87 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+
+.MainWrap{width: 1000px; margin:0 auto}
+.TextLeft{text-align: left;}
+.TextRight{text-align: right;}
+
+.CommentEditor{
+  text-align: center;
+  padding: 20px;
+}
+
+.CommentEditor input, .CommentEditor textarea{
+  margin-bottom: 20px;
+  width: 500px;
+  padding:10px
+}
+
+.CommentEditor textarea{
+  height: 75px;
+  width: 100%;
+}
+
+
+.CommentEditor button{
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* List */
+.CommentList h4{
+  margin-bottom: 10px;
+}
+
+.CommentList{
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.CommentList h2{
+  text-align: center ;
+}
+
+.CommentItem{
+  background-color: rgb(240,240,240);
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.CommentItem .info{
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.CommentItem .date{
+  color: gray;
+}
+
+.CommentItem .content{
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.CommentItem .content textarea{
+  padding:10px;
+  height: 75px;
+  width: 100%;
+  resize:vertical
+}
+
+.reply{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.reply textarea{
+  min-height: 75px;
+  width: 500px;
+}
+.reply button{
+  height: 77px;
+  padding:0 15px;
+  margin-left:10px;
+}
