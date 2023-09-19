@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+.Mypage {
+  text-align: center;
+  width: 100%;
+  min-width: 375px;
+  max-width: 750px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul{list-style: none;margin: unset;padding: unset;}
+li{list-style: none;}
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+.logo{
+  width: 100px;height: 80px;
+  background: tomato;
+  margin: 50px auto 20px;
+}
+.profileImg{
+  width: 100px;height: 100px;
+  border-radius: 30px;
+  background: yellow;
+  margin: 0 auto;}
+.profileName{
+  font-size: 4.5vw;
+  color: #065ED9;
+  font-weight: bold;
+}
+
+.Menu ul{width: 60%;margin: 0 auto;}
+
+.Menu ul li{
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 3px;
+}
+
+.btMenu{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 0;
+  font-size: 11px;
+}
