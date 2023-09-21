@@ -1,11 +1,11 @@
 import './Main.css';
-import Header from "./Header.js";
+import Main_Header from "./Main_Header.js";
 import Content from "./Content.js";
 
 function Main() {
     return (
         <div className="MainWrap">
-            <Header/>
+            <Main_Header/>
             <Content/>
         </div>
     );

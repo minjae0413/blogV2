@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-const Header:any= () =>{
+const Main_Header:any= () =>{
  return(
      <div className="header">
          <h1>P:LOG</h1>
@@ -12,11 +12,11 @@ const Header:any= () =>{
                  </p>
              </div>
              <div className="profile">
-                 <img src="" alt="" />
+                <img src="" alt=""/>
              </div>
          </div>
      </div>
  )
 }
 
-export default Header;
+export default Main_Header;

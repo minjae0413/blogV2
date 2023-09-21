@@ -111,7 +111,7 @@ const Content = () =>{
                     modules={[FreeMode]}
                 >
                     <SwiperSlide>
-                        <a href="#;">
+                        <Link href="#;">
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -119,10 +119,10 @@ const Content = () =>{
                                 <dt>타이틀</dt>
                                 <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
                             </dl>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#;">
+                        <Link href="#;">
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -130,10 +130,10 @@ const Content = () =>{
                                 <dt>타이틀</dt>
                                 <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
                             </dl>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#;">
+                        <Link href="#;">
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -141,10 +141,10 @@ const Content = () =>{
                                 <dt>타이틀</dt>
                                 <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
                             </dl>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#;">
+                        <Link href="#;">
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -152,7 +152,7 @@ const Content = () =>{
                                 <dt>타이틀</dt>
                                 <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
                             </dl>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                 </Swiper>
             </div>
