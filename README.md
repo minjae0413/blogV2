@@ -1,3 +1,18 @@
+#### 230925 sass, fontawesome 셋팅
+
+pull 받은 다은 터미널-> npm i 해서 다운로드 
+
+sass는 컴파일 필요없음
+fontawesome 사용 예시 
+
+```js
+import React from "react";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+```
+원하는 아이콘은 사이트에서 찾아서 react버전으로 코드 긁어오면됨
+참고 사이트
+https://www.daleseo.com/react-font-awesome/
 #### 20230820 (일)
 - 메인 색상 : 블루, 옐로우, 그린
 
