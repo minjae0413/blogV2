@@ -91,6 +91,10 @@
   height: 100%;
 }
 
+.MainWrap .MyInfo .swiper-slide *{
+  color:#fff;
+}
+
 .MainWrap .MyInfo .swiper-slide .slide-tit{
   font-size: 24px;
   font-weight: bold;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 
@@ -14,7 +15,7 @@ const Content = () =>{
                     height={200}
                 >
                     <SwiperSlide className='b_blue'>
-                        <a href="#;">
+                        <Link>
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     오늘 섭취 칼로리<br/>
@@ -26,10 +27,10 @@ const Content = () =>{
                                 </div>
                             </div>
                             <div className="slide-right"></div>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide className="b_blue2">
-                        <a href="#;">
+                        <Link>
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     현재 날씨는?<br/>
@@ -41,10 +42,10 @@ const Content = () =>{
                                 </div>
                             </div>
                             <div className="slide-right"></div>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                     <SwiperSlide className='b_red'>
-                        <a href="" className="t2">
+                        <Link className="t2">
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     오늘 운동, 얼마큼?<br/>
@@ -70,14 +71,14 @@ const Content = () =>{
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </SwiperSlide>
                 </Swiper>
             </div>
             
             <div className="filterWrap">
                 <h3>나의 관심 로그 찾아보기</h3>
-                <Swiper 
+                <Swiper
                     className="hashTag"
                     spaceBetween={10}
                     slidesPerView={'auto'}
@@ -101,9 +102,8 @@ const Content = () =>{
                     <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
                 </Swiper>
             </div>
-
             <div className="BestBlog">
-                <Swiper 
+                <Swiper
                     className="slide-Blog"
                     spaceBetween={20}
                     slidesPerView={'auto'}
@@ -111,7 +111,7 @@ const Content = () =>{
                     modules={[FreeMode]}
                 >
                     <SwiperSlide>
-                        <Link href="#;">
+                        <Link>
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -122,7 +122,7 @@ const Content = () =>{
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link href="#;">
+                        <Link>
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -133,7 +133,7 @@ const Content = () =>{
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link href="#;">
+                        <Link>
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -144,7 +144,7 @@ const Content = () =>{
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link href="#;">
+                        <Link>
                             <div className="thumbnail">
                                 <img src="" alt="" />
                             </div>
@@ -156,7 +156,6 @@ const Content = () =>{
                     </SwiperSlide>
                 </Swiper>
             </div>
-
             <div className="live-Best">
                 <h3>실시간 인기 로그</h3>
                 <div className="live-list">
