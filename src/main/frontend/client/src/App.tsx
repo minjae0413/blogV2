@@ -22,13 +22,18 @@ function App() {
 
   return (
       <div className="App">
-          <Main_Header/>
-            <Main/>
-            <Footer/>
-            <Routes>
-                  <Route path="/join" element={<Join />} />
-                  <Route path="/login" element={<Login />} />
-            </Routes>
+          <div className="f-between">
+            <div className='entire_left'></div>
+            <div className='entire_right'>
+              <Main_Header/>
+                <Main/>
+                <Footer/>
+                <Routes>
+                      <Route path="/join" element={<Join />} />
+                      <Route path="/login" element={<Login />} />
+                </Routes>
+            </div>
+          </div>
       </div>
   );
 }
