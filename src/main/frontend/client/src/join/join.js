@@ -1,4 +1,4 @@
-import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, SimpleLo} from './styles/emotion'
+import {Wrap, Inner, Input, EmailInput,  FlexSt} from './styles/emotion'
 import React from "react";
 
 export default function Join(){

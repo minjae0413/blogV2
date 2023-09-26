@@ -1,6 +1,6 @@
 import './Mypage.css';
 
-function Mypage() {
+export default function Mypage() {
   return (
     <div className="Mypage">
       <div className='logo'></div>
@@ -25,4 +25,3 @@ function Mypage() {
   );
 }
 
-export default Mypage;

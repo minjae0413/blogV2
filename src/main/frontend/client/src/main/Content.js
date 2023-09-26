@@ -19,7 +19,7 @@ const Content = () =>{
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     오늘 섭취 칼로리<br/>
-                                    <span>서브텍스트 안보인다~~</span>
+                                    <span>서브텍스트 보인다~~</span>
                                 </div>
                                 <div className="slide-info">
                                     <strong>2000</strong>
@@ -34,7 +34,7 @@ const Content = () =>{
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     현재 날씨는?<br/>
-                                    <span>서브텍스트 안보인다~~</span>
+                                    <span>서브텍스트 보인다~~</span>
                                 </div>
                                 <div className="slide-info">
                                     <strong>17℃</strong>
@@ -49,7 +49,7 @@ const Content = () =>{
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     오늘 운동, 얼마큼?<br/>
-                                    <span>서브텍스트 안보인다~~</span>
+                                    <span>서브텍스트 보인다~~</span>
                                 </div>
                                 <div className="slide-info">
                                     <div className="time-info">
