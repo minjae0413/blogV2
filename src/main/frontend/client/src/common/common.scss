@@ -39,11 +39,21 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-a{
-    text-decoration: none;color:#333;}
 *{box-sizing: border-box; color: #333333}
+a{text-decoration: none;color:#333;}
 .ov{overflow: hidden}
 .p_r{position: relative}
 .hidden{font-size: 0;width: 1px; height:1px; background: rgba(0,0,0,0.0); position: absolute;z-index: -1}
 .center{left: 50%; top:50%; transform: translate(-50%,-50%)}
 .ir{font-size: 0;color: transparent;line-height: 0;}
+
+.flex-box{
+  display: flex;
+}
+
+.b_blue{background: #2C50FF;}
+.b_blue2{background: #6164FF;}
+.b_blue3{background: #EDEFFE;}
+.b_red{background: #FD7275;}
+.b_beige{background: #fff8d7;}
+.b_pink{background: #fff6f7;}

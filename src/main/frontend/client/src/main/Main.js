@@ -1,4 +1,3 @@
-import './Main.css';
 import Content from "./Content.js";
 
 const Main = () => {

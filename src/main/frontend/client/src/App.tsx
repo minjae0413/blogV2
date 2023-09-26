@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 
 import "./common/common.scss"
-import "./main/Main.css"
+import "./main/Main.scss"
 
 import Main from "./main/Main";
 import Join from "./join/join";
@@ -26,12 +26,12 @@ function App() {
             <div className='entire_left'></div>
             <div className='entire_right'>
               <Main_Header/>
-                <Main/>
-                <Footer/>
-                <Routes>
-                      <Route path="/join" element={<Join />} />
-                      <Route path="/login" element={<Login />} />
-                </Routes>
+              <Main/>
+              <Footer/>
+              <Routes>
+                    <Route path="/join" element={<Join />} />
+                    <Route path="/login" element={<Login />} />
+              </Routes>
             </div>
           </div>
       </div>
