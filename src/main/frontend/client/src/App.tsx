@@ -7,6 +7,7 @@ import "./main/Main.scss"
 import Main from "./main/Main";
 import Join from "./join/join";
 import Login from "./join/login";
+import Mypage from "./mypage/Mypage";
 
 import Main_Header from "./components/Main_Header";
 import Footer from "./components/Footer"
@@ -25,13 +26,18 @@ function App() {
           <div className="f-between">
             <div className='entire_left'></div>
             <div className='entire_right'>
-              <Main_Header/>              
               <Routes>
-                    <Route path="/" element={<Main/>} />
+                    <Route path="/" element={
+                      <>
+                        <Main_Header/>              
+                        <Main/>
+                        <Footer/>
+                      </>
+                  } />
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/mypage" element={<Mypage />} />
               </Routes>
-              <Footer/>
             </div>
           </div>
       </div>
