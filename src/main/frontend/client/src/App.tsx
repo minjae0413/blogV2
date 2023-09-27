@@ -25,13 +25,13 @@ function App() {
           <div className="f-between">
             <div className='entire_left'></div>
             <div className='entire_right'>
-              <Main_Header/>
-              <Main/>
-              <Footer/>
+              <Main_Header/>              
               <Routes>
+                    <Route path="/" element={<Main/>} />
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
               </Routes>
+              <Footer/>
             </div>
           </div>
       </div>
