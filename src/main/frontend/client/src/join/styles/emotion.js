@@ -57,9 +57,9 @@ export const LinkBtn = styled.a`
     font-size: 12px;
 `
 export const SimpleLo = styled.a`
-    width:11vw;
-    height:11vw;
-    line-height:11vw;
+    width:35px;
+    height:35px;
+    line-height:35px;
     border-radius:50%;
     font-size:3vw;
     text-align:center;

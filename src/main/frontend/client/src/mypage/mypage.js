@@ -1,4 +1,5 @@
 import './Mypage.css';
+import { Link } from "react-router-dom";
 
 export default function Mypage() {
   return (
@@ -19,7 +20,7 @@ export default function Mypage() {
       </div>
       <div className='btMenu'>
         <a>정보변경</a>
-        <a>로그아웃</a>
+        <Link to='/login'>로그아웃</Link>
       </div>
     </div>
   );

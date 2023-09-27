@@ -1,5 +1,5 @@
 import React, { useState, createContext, useContext, Component } from 'react';
-import React from "react";
+import {Wrap, Inner, Input, EmailInput,  FlexSt} from './styles/emotion'
 
 export default function Join(){
         const [id, setId] = useState('');

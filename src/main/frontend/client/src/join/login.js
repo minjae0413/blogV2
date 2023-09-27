@@ -1,5 +1,6 @@
 import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, SimpleLo} from './styles/emotion'
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 
 export default function Emotion(){
 
@@ -37,10 +38,10 @@ export default function Emotion(){
                     <Stick></Stick>
                     <LinkBtn href='#;'>회원가입</LinkBtn>
                 </FlexSt>
-                <h4 style={{marginTop:"5%",textAlign:"center",fontSize:"13px"}}>간편 로그인</h4>
+                <h4 style={{margin:"5% auto",textAlign:"center",fontSize:"13px"}}>간편 로그인</h4>
                 <FlexSt style={{marginTop:"5%",width:"40%",margin:"0 auto"}}>
-                    <SimpleLo href="#;" style={{background:"#ffe812"}}>kakao</SimpleLo>
-                    <SimpleLo href="#;" style={{background:"#2db400",color:"#fff"}}>Naver</SimpleLo>
+                    <SimpleLo href="#;" style={{background:"#ffe812"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
+                    <SimpleLo href="#;" style={{background:"#2db400"}}><FontAwesomeIcon icon={faN}/></SimpleLo>
                 </FlexSt>
             </Inner>
             

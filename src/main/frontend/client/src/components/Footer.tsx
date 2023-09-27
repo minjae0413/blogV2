@@ -2,7 +2,6 @@ import {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faBowlFood, faCalendar, faNoteSticky, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Footer:any= () =>{
