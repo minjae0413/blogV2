@@ -102,7 +102,7 @@ const Content = () =>{
                     <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
                 </Swiper>
             </div>
-            <div className="BestBlog">
+            <div className="BestBlog ov">
                 <Swiper
                     className="slide-Blog"
                     spaceBetween={20}

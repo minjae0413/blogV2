@@ -12,6 +12,7 @@ import Mypage from "./mypage/mypage";
 
 import Main_Header from "./components/Main_Header";
 import Footer from "./components/Footer"
+import WriteEdit from "./components/WriteEdit";
 
 function App() {
   const [ message, setMessage ] = useState([]);
@@ -26,17 +27,21 @@ function App() {
       <div className="App">
           <div className="f-center">
             <div className='entire_left'></div>
-            <div className="ov">
               <div className='entire_right'>
-                <Main_Header/>
                 <Routes>
-                      <Route path="/" element={<Main/>} />
-                      <Route path="/join" element={<Join />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/mypage" element={<Mypage />} />
+                    <Route path="/" element={
+                      <>
+                        <Main_Header/>
+                        <Main/>
+                        <Footer/>
+                      </>
+                      } />
+                    <Route path="/join" element={<Join />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/mypage" element={<Mypage />} />
+                    <Route path="/writeForm" element={<WriteEdit />} />
                 </Routes>
               </div>
-            </div>
           </div>
       </div>
   );

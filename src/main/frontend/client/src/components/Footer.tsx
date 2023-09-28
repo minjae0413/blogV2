@@ -8,10 +8,26 @@ const Footer:any= () =>{
 return(
         <div className="footer">
             <ul className="footerWrap">
-                <li><FontAwesomeIcon icon={faBowlFood} /><p className="ir">잇로그</p></li>
-                <li><FontAwesomeIcon icon={faCalendar} /><p className="ir">캘린더</p></li>
-                <li><FontAwesomeIcon icon={faNoteSticky} /><p className="ir">글쓰기</p></li>
-                <li><FontAwesomeIcon icon={faBars} /><p className="ir">메뉴</p></li>
+                <li>
+                    <Link to={""}>
+                        <FontAwesomeIcon icon={faBowlFood} /><p className="ir">잇로그</p>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={""}>
+                        <FontAwesomeIcon icon={faCalendar} /><p className="ir">캘린더</p>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={"/writeForm"}>
+                        <FontAwesomeIcon icon={faNoteSticky} /><p className="ir">글쓰기</p>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={""}>
+                        <FontAwesomeIcon icon={faBars} /><p className="ir">메뉴</p>
+                    </Link>
+                </li>
             </ul>
         </div>
     )
