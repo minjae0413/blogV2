@@ -12,7 +12,7 @@ import Mypage from "./mypage/mypage";
 
 import Main_Header from "./components/Main_Header";
 import Footer from "./components/Footer"
-import WriteEdit from "./components/WriteEdit";
+import BoardEditor from "./components/board/BoardEditor";
 
 function App() {
   const [ message, setMessage ] = useState([]);
@@ -39,7 +39,7 @@ function App() {
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/mypage" element={<Mypage />} />
-                    <Route path="/writeForm" element={<WriteEdit />} />
+                    <Route path="/writeForm" element={<BoardEditor />} />
                 </Routes>
               </div>
           </div>
