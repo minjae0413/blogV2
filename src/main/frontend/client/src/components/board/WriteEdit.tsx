@@ -40,8 +40,8 @@ const WriteEdit = () =>{
 
     return (
         <>
-            <label htmlFor="">제목 : </label><input type="text" name="title" value={value.title} onChange={handleChangeBoard}/>
-            <ReactQuill theme="snow" value={value.content} onChange={handleChangeContent}/>
+            <label className="Title" htmlFor=""><input type="text" name="title" value={value.title} onChange={handleChangeBoard} placeholder="제목을 입력해주세요."/></label>
+            <ReactQuill theme="snow" value={value.content} onChange={handleChangeContent} placeholder="내용을 입력해주세요."/>
             <button onClick={handleBoardSubmit}>저장하기</button>
         </>
     );
