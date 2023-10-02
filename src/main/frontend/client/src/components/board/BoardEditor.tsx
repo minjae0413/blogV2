@@ -1,7 +1,6 @@
 import WriteEdit from "./WriteEdit";
 import { useRef, useState } from 'react';
 
-
 const BoardEditor = () =>{
     const [data,setData] = useState<any[]>([]);
     const dataId = useRef(0);

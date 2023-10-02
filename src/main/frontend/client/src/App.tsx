@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 
-import "./common/common.scss"
-import "./main/Main.scss"
+import "./common/common.scss";
+import "./main/Main.scss";
+import "./scss/Board.scss";
 
 import Main from "./main/Main";
 import Join from "./join/join";
@@ -39,7 +40,13 @@ function App() {
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/mypage" element={<Mypage />} />
-                    <Route path="/writeForm" element={<BoardEditor />} />
+                    <Route path="/writeForm" element={
+                      <>
+                        <Main_Header/>
+                        <BoardEditor />
+                        <Footer/>
+                      </>
+                    } />
                 </Routes>
               </div>
           </div>
