@@ -1,6 +1,8 @@
 package com.blog.blog.DTO;
 
+
 public class MemberDTO {
+    // 클라이언트에 전달되는 값을 담는 객체
     private String id;
     private String pw;
     private String email;
