@@ -27,24 +27,25 @@ export default function Join(){
     */
 
     const dataSubmit = (e) => {
-        const formData = new FormData();
-        console.log(id);
-        console.log(pw);
-        console.log(email1+'@'+email2);
-        formData.append('id', id);
-        formData.append('pw', pw);
-        formData.append('email',email1+'@'+email2);
+        const data = {
+            'id' : id,
+            'pw' : pw,
+            'email' : email1+'@'+email2,
+        };
 
+        const jsonData = JSON.stringify(data);
 
-        axios({
-          method:'post',
-          url:'localhost:9090/api/member/join',
-          data: formData,
-        }).then((response) => {
-            console.log(response);
-        }).catch((error) => {
-            console.log(error);
-        })
+        axios.post('http://localhost:9090/api/member/join', jsonData, {
+                headers: {
+                    'Content-Type': 'application/json', // 요청 헤더에 JSON 형식임을 명시
+                },
+            })
+            .then( response => {
+                console.log(response);
+            })
+            .catch( error => {
+                console.log(error);
+            });
     }
 
     return(
