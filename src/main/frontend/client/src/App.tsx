@@ -7,7 +7,7 @@ import "./main/Main.scss"
 import Main from "./main/Main";
 import Join from "./join/join";
 import Login from "./join/login";
-import Mypage from "./mypage/Mypage";
+import Mypage from "./mypage/mypage";
 
 import Main_Header from "./components/Main_Header";
 import Footer from "./components/Footer"
