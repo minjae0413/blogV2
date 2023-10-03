@@ -1,8 +1,11 @@
+b,strong{font-weight: bold;}
+
 .Title{
     width: 100%;
     display: flex;
     align-items:center;
     justify-content: space-between;
+    margin-bottom: 15px;
 
     input{
         width: 100%;
@@ -11,10 +14,16 @@
     }
 }
 .quill{
-    margin: 15px 0;
+    margin-bottom: 15px;
     min-height: 300px;
     
     .ql-editor{
         min-height: 300px;
     }
+
+    .ql-toolbar{
+        .ql-formats {
+            margin-right: 8px !important;
+        }  
+    } 
 }
