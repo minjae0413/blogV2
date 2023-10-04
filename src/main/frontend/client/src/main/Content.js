@@ -86,20 +86,18 @@ const Content = () =>{
                     modules={[FreeMode]}
                 >
                     <SwiperSlide><span>#퇴근</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴사</span></SwiperSlide>
-                    <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴근</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴사</span></SwiperSlide>
-                    <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴근</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴사</span></SwiperSlide>
-                    <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴근</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴사</span></SwiperSlide>
-                    <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴근</span></SwiperSlide>
-                    <SwiperSlide><span>#퇴사</span></SwiperSlide>
-                    <SwiperSlide><span>#일하기싫어</span></SwiperSlide>
+                    <SwiperSlide><span>#아자아자빠이팅</span></SwiperSlide>
+                    <SwiperSlide><span>#LG정규시즌우승</span></SwiperSlide>
+                    <SwiperSlide><span>#29년의기다림</span></SwiperSlide>
+                    <SwiperSlide><span>#우승시계</span></SwiperSlide>
+                    <SwiperSlide><span>#엘지아자아자빠이팅</span></SwiperSlide>
+                    <SwiperSlide><span>#무적엘지</span></SwiperSlide>
+                    <SwiperSlide><span>#개발2팀빠이팅</span></SwiperSlide>
+                    <SwiperSlide><span>#리액트빠이팅</span></SwiperSlide>
+                    <SwiperSlide><span>#출근</span></SwiperSlide>
+                    <SwiperSlide><span>#아시안게임빠이팅</span></SwiperSlide>
+                    <SwiperSlide><span>#김우민3관왕</span></SwiperSlide>
+                    <SwiperSlide><span>#아시안게임야구</span></SwiperSlide>
                 </Swiper>
             </div>
             <div className="BestBlog ov">

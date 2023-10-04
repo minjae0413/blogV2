@@ -1,13 +1,14 @@
 import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, SimpleLo} from './styles/emotion'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 export default function Emotion(){
 
     return(
         <Wrap>
             <Inner>
-                <a href='#;' style={{textDecoration:"none",color:"#999",fontSize:"12px"}}>이전 페이지</a>
+                <Link to="/Main">이전 페이지</Link>
 
                 <Tit>로그인</Tit>
                 <div>
@@ -19,8 +20,8 @@ export default function Emotion(){
                     </Input>
                 </div>
 
-                <FlexSt>
-                    <FlexSt>
+                <FlexSt className='f-center'>
+                    <FlexSt className='mr-20'>
                         <input type='checkbox' id='keepLogin' />
                         <label for='keepLogin'>로그인 상태 유지</label>
                     </FlexSt>
@@ -34,7 +35,7 @@ export default function Emotion(){
                     <Btn type='button'>로그인</Btn>
                 </div>
 
-                <FlexSt style={{margin:"5% auto",  width: "70%"}}>
+                <FlexSt className='f-between' style={{margin:"5% auto",  width: "70%"}}>
                     <LinkBtn href='#;'>아이디 찾기</LinkBtn>
                     <Stick></Stick>
                     <LinkBtn href='#;'>비밀번호 찾기</LinkBtn>
@@ -42,9 +43,9 @@ export default function Emotion(){
                     <LinkBtn href='#;'>회원가입</LinkBtn>
                 </FlexSt>
                 
-                <h4 style={{margin:"5% auto",textAlign:"center",fontSize:"13px"}}>간편 로그인</h4>
-                <FlexSt style={{marginTop:"5%",width:"40%",margin:"0 auto",justifyContent:"center"}}>
-                    <SimpleLo href="#;" style={{background:"#ffe812", marginRight:"20px"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
+                <h4 className='tc' style={{margin:"5% auto",fontSize:"13px"}}>간편 로그인</h4>
+                <FlexSt className='f-center' style={{marginTop:"5%",width:"40%",margin:"0 auto"}}>
+                    <SimpleLo className='mr-20' href="#;" style={{background:"#ffe812"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
                     <SimpleLo href="#;" style={{background:"#2db400"}}><FontAwesomeIcon icon={faN}/></SimpleLo>
                 </FlexSt>
             </Inner>

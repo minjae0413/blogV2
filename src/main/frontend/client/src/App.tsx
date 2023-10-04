@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link} from "react-router-dom";
 
 import "./common/common.scss";
 import "./main/Main.scss";

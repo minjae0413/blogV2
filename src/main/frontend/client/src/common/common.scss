@@ -48,7 +48,7 @@ a{text-decoration: none;color:#333;}
 .ir{font-size: 0;color: transparent;line-height: 0;}
 
 .flex-box{
-  display: flex;
+    display: flex;
 }
 
 .b_blue{background: #2C50FF;}
@@ -57,3 +57,10 @@ a{text-decoration: none;color:#333;}
 .b_red{background: #FD7275;}
 .b_beige{background: #fff8d7;}
 .b_pink{background: #fff6f7;}
+
+.tc{text-align: center;}
+
+.mr-10{margin-right: 10px;}
+.mr-20{margin-right: 20px;}
+.ml-10{margin-left: 10px;}
+.ml-20{margin-left: 20px;}
