@@ -1,85 +1,4 @@
-.f-between{
-    display: flex;
-    justify-content: space-between;
-}
 
-.f-center{
-    display: flex;
-    justify-content: center;
-}
-
-.App{
-    background: #2C50FF;
-    .entire_left{
-        display: none;
-        width: 50%;
-        height: auto;
-    }
-    
-    .entire_right{
-        width: 100%;
-        max-width:750px;
-        height: 100%;
-        margin:0 auto;
-        padding:30px;
-        line-height: 1.2;
-        background: #fff;
-    }
-}
-
-.MainWrap, .header, .footer{
-    padding:10px 0;
-}
-
-.header{
-    h1{
-        color:#075FDB;
-        text-align: center;
-        padding-bottom: 15px;
-        font-weight: bold;
-        font-size: 32px;
-    }
-
-    .tit{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 24px;
-
-        p{
-            font-weight: bold;
-            position: relative;
-            display: block;
-            margin-top: 10px;
-            z-index: 2;
-
-            &::before{
-                content: "";
-                display: block;
-                position: absolute;
-                top: 60%;
-                left: 0;
-                height: 10px;
-                width: 100%;
-                background:#FFF3B2;
-                z-index: -1;
-            }
-        }
-        
-        .profile{
-            border: 1px solid #f00;
-            display: block;
-            width: 75px;
-            height: 75px;
-            border-radius: 15px;
-        }
-
-        .userName{
-            color:#797979;
-            font-size: 20px;
-        }
-    }
-}
 
 /* 슬라이드 */
 .swiper-content {
@@ -87,6 +6,7 @@
 }
 
 .MainWrap{
+    padding:0 30px 70px;
 
     h3{
         font-size: 18px;
@@ -267,32 +187,6 @@
 
 
 
-/* footer */
-.footer{
-    background: #fff;
-    position: sticky;
-    bottom: 0px;
-    width: 100%;
-    max-width: 750px;
-    z-index: 2;
-
-    .footerWrap{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin:0 auto;
-
-        li{
-            width:25%;
-            text-align: center;
-            font-size: 25px;
-
-            svg path{
-                color: #2C50FF;
-            }
-        }
-    }
-}
 
 
 @media (min-width: 750px) {

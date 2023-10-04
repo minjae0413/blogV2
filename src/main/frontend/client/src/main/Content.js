@@ -14,6 +14,21 @@ const Content = () =>{
                     slidesPerView={1}
                     height={200}
                 >
+                    <SwiperSlide className="b_blue2">
+                        <Link to={'/weather'}>
+                            <div className="slide-left">
+                                <div className="slide-tit">
+                                    현재 날씨는?<br/>
+                                    <span>서브텍스트 보인다~~</span>
+                                </div>
+                                <div className="slide-info">
+                                    <strong>17℃</strong>
+                                    <span className="t2">비가 오고 있습니다 &#40;13:00 기준&#41;</span>
+                                </div>
+                            </div>
+                            <div className="slide-right"></div>
+                        </Link>
+                    </SwiperSlide>
                     <SwiperSlide className='b_blue'>
                         <Link>
                             <div className="slide-left">
@@ -24,21 +39,6 @@ const Content = () =>{
                                 <div className="slide-info">
                                     <strong>2000</strong>
                                     <span>kcal</span>
-                                </div>
-                            </div>
-                            <div className="slide-right"></div>
-                        </Link>
-                    </SwiperSlide>
-                    <SwiperSlide className="b_blue2">
-                        <Link>
-                            <div className="slide-left">
-                                <div className="slide-tit">
-                                    현재 날씨는?<br/>
-                                    <span>서브텍스트 보인다~~</span>
-                                </div>
-                                <div className="slide-info">
-                                    <strong>17℃</strong>
-                                    <span className="t2">비가 오고 있습니다 &#40;13:00 기준&#41;</span>
                                 </div>
                             </div>
                             <div className="slide-right"></div>

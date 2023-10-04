@@ -1,0 +1,142 @@
+.f-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-center{
+    display: flex;
+    justify-content: center;
+}
+
+.App{
+    height: 100vh;
+    background: #2C50FF;
+    padding: 15px;
+    
+    > .flex-box{
+        height: 100%;
+        
+        .entire_left{
+            width: 50%;
+            height: auto;
+        }
+        
+        .entire_right{
+            overflow: auto;
+            width: 100%;
+            max-width:750px;
+            height: 100%;
+            line-height: 1.2;
+            background: #fff;
+    
+            &::-webkit-scrollbar{
+                width: 8px;
+                padding-right: 5px;
+            }
+            &::-webkit-scrollbar-thumb{
+                background: #797979;
+                border-radius: 4px;
+            }
+            &::-webkit-scrollbar-track{
+            }
+        }
+    } 
+}
+
+
+.MainWrap, .Header, .footer{
+    padding:10px 0;
+}
+
+.Header{
+    background: #fff;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    max-width: 750px;
+    padding:15px 30px;
+    z-index: 2;
+
+
+    h1{
+        a{
+            color:#075FDB;
+            text-align: center;
+            padding-bottom: 15px;
+            font-weight: bold;
+            font-size: 32px;
+            display: block;
+        }
+    }
+
+    .tit{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+
+        p{
+            font-weight: bold;
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            z-index: 2;
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 60%;
+                left: 0;
+                height: 10px;
+                width: 100%;
+                background:#FFF3B2;
+                z-index: -1;
+            }
+        }
+        
+        .profile{
+            border: 1px solid #f00;
+            display: block;
+            width: 75px;
+            height: 75px;
+            border-radius: 15px;
+        }
+
+        .userName{
+            color:#797979;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+/* footer */
+.Footer{
+    background: #fff;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 750px;
+    z-index: 2;
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.1);
+
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin:0 auto;
+        padding:15px 0;
+
+        li{
+            width:25%;
+            text-align: center;
+            font-size: 25px;
+
+            svg path{
+                color: #2C50FF;
+            }
+        }
+    }
+}

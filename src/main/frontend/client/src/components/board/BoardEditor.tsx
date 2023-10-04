@@ -1,5 +1,6 @@
 import WriteEdit from "./WriteEdit";
 import { useRef, useState } from 'react';
+import "../../scss/Board.scss";
 
 const BoardEditor = () =>{
     const [data,setData] = useState<any[]>([]);

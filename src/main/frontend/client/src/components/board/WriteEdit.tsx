@@ -52,7 +52,7 @@ const WriteEdit = () =>{
         }
     }
     return (
-        <>
+        <article className="Wrap">
             <label className="Title" htmlFor=""><input type="text" name="title" value={value.title} onChange={handleChangeBoard} placeholder="제목을 입력해주세요."/></label>
             <ReactQuill
                 value={value.content}
@@ -62,7 +62,7 @@ const WriteEdit = () =>{
                 modules={modules}
             />
             <button onClick={handleBoardSubmit}>저장하기</button>
-        </>
+        </article>
     );
 }
 

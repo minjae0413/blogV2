@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Main_Header:any= () =>{
 return(
-        <div className="header">
-            <h1>P:LOG</h1>
+        <div className="Header Wrap">
+            <h1><Link to={"/"}>P:LOG</Link></h1>
             <div className="tit">
                 <div>
                     <Link to={"/mypage"} className="userName">홍길동님</Link>

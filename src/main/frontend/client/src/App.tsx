@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link} from "react-router-dom";
 
-import "./common/common.scss";
-import "./main/Main.scss";
-import "./scss/Board.scss";
+import "./scss/common.scss";
+import "./scss/default.scss";
+
 
 import Main from "./main/Main";
 import Join from "./join/join";
@@ -14,6 +14,7 @@ import Mypage from "./mypage/mypage";
 import Main_Header from "./components/Main_Header";
 import Footer from "./components/Footer"
 import BoardEditor from "./components/board/BoardEditor";
+import WeatherMain from "./components/weather/WeatherMain";
 
 function App() {
   const [ message, setMessage ] = useState([]);
@@ -26,8 +27,8 @@ function App() {
 
   return (
       <div className="App">
-          <div className="f-center">
-            <div className='entire_left'></div>
+          <div className="flex-box">
+              <div className='entire_left'></div>
               <div className='entire_right'>
                 <Routes>
                     <Route path="/" element={
@@ -44,6 +45,13 @@ function App() {
                       <>
                         <Main_Header/>
                         <BoardEditor />
+                        <Footer/>
+                      </>
+                    } />
+                    <Route path="/Weather" element={
+                      <>
+                        <Main_Header/>
+                        <WeatherMain/>
                         <Footer/>
                       </>
                     } />
