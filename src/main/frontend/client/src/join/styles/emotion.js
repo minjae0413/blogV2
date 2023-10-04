@@ -61,7 +61,7 @@ export const SimpleLo = styled.a`
     height:35px;
     line-height:35px;
     border-radius:50%;
-    font-size:3vw;
+    font-size:1rem;
     text-align:center;
     text-decoration:none;
     color:#000;

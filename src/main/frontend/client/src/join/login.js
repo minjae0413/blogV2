@@ -18,6 +18,7 @@ export default function Emotion(){
                         <EmailInput type="text" placeholder='비밀번호를 입력하세요.'/>
                     </Input>
                 </div>
+
                 <FlexSt>
                     <FlexSt>
                         <input type='checkbox' id='keepLogin' />
@@ -28,9 +29,11 @@ export default function Emotion(){
                         <label for='saveId'>아이디 저장하기</label>
                     </FlexSt>
                 </FlexSt>
+
                 <div style={{textAlign:"center"}}>
-                   <Btn type='button'>로그인</Btn>
+                    <Btn type='button'>로그인</Btn>
                 </div>
+
                 <FlexSt style={{margin:"5% auto",  width: "70%"}}>
                     <LinkBtn href='#;'>아이디 찾기</LinkBtn>
                     <Stick></Stick>
@@ -38,9 +41,10 @@ export default function Emotion(){
                     <Stick></Stick>
                     <LinkBtn href='#;'>회원가입</LinkBtn>
                 </FlexSt>
+                
                 <h4 style={{margin:"5% auto",textAlign:"center",fontSize:"13px"}}>간편 로그인</h4>
-                <FlexSt style={{marginTop:"5%",width:"40%",margin:"0 auto"}}>
-                    <SimpleLo href="#;" style={{background:"#ffe812"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
+                <FlexSt style={{marginTop:"5%",width:"40%",margin:"0 auto",justifyContent:"center"}}>
+                    <SimpleLo href="#;" style={{background:"#ffe812", marginRight:"20px"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
                     <SimpleLo href="#;" style={{background:"#2db400"}}><FontAwesomeIcon icon={faN}/></SimpleLo>
                 </FlexSt>
             </Inner>
