@@ -1,3 +1,14 @@
+
+#### sass import 오류 
+
+global.d.ts 생성 후 아래 코드 작성 
+```js
+declare module '*.scss' {
+    const content: string;
+    export default content;
+}
+```
+
 #### 날씨 API
 
 제공 사이트
