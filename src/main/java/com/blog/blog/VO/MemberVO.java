@@ -1,7 +1,6 @@
 package com.blog.blog.VO;
 
 import jakarta.persistence.*;
-import org.w3c.dom.Text;
 import java.util.Date;
 
 @Entity
@@ -32,7 +31,8 @@ public class MemberVO {
         private String mb_addr2;
         private String mb_addr3;
         private String mb_addr_jibeon;
-        private Text mb_signature;
+        @Column(columnDefinition = "text")
+        private String mb_signature;
         private String mb_recommend;
         private Integer mb_point;
         private Date mb_today_login;
@@ -43,12 +43,14 @@ public class MemberVO {
         private String mb_intercept_date;
         private Date mb_email_certify;
         private String mb_email_certify2;
-        private Text mb_memo;
+        @Column(columnDefinition = "text")
+        private String mb_memo;
         private String mb_lost_certify;
         private Integer mb_mailling;
         private Integer mb_sms;
         private Integer mb_open;
         private Date mb_open_date;
-        private Text mb_profile;
+        @Column(columnDefinition = "text")
+        private String mb_profile;
         private String mb_memo_call;
 }

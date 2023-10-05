@@ -9,6 +9,7 @@ import Main from "./main/Main";
 import Join from "./join/join";
 import Login from "./join/login";
 import Mypage from "./mypage/mypage";
+import Testapi from "./testapi/Testapi";
 
 
 import Main_Header from "./components/Main_Header";
@@ -41,6 +42,7 @@ function App() {
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/mypage" element={<Mypage />} />
+                    <Route path="/testapi" element={<Testapi />} />
                     <Route path="/writeForm" element={
                       <>
                         <Main_Header/>
@@ -56,6 +58,7 @@ function App() {
                       </>
                     } />
                 </Routes>
+
               </div>
           </div>
       </div>
