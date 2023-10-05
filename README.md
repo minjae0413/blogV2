@@ -1,3 +1,16 @@
+#### 날씨 API
+
+제공 사이트
+https://openweathermap.org/
+
+사용법
+https://velog.io/@sean2337/React-OpenWeather-API%EB%A1%9C-%EC%9B%B9%EC%97%90%EC%84%9C-%EB%82%A0%EC%94%A8-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0
+
+하다가 막히면 각자 물어보고 합시다. 아자아자 화이팅
+### 칼로리 API 
+https://www.data.go.kr/data/15050912/fileData.do#tab-layer-openapi
+
+[공공데이터 포털/ 사이트 내 가이드 참고바람]
 #### 230927 커밋메세지
 - FEAT : 새로운 기능의 추가
 - FIX: 버그 수정
@@ -6,7 +19,7 @@
 - REFACTOR: 코드 리펙토링
 - TEST: 테스트 코트, 리펙토링 테스트 코드 추가
 - CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)
-
+- ADD: 새로운 파일/ 기능 추가
 #### 230925 sass, fontawesome 셋팅
 
 pull 받은 다은 터미널-> npm i 해서 다운로드 
