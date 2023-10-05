@@ -2,13 +2,14 @@ import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, Simple
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import './styles/Join.css';
 
 export default function Emotion(){
 
     return(
-        <Wrap>
+        <Wrap className='loginWrap'>
             <Inner>
-                <Link to="/Main">이전 페이지</Link>
+                <Link to="/Main" className="prevBtn">이전 페이지</Link>
 
                 <Tit>로그인</Tit>
                 <div>
@@ -35,18 +36,18 @@ export default function Emotion(){
                     <Btn type='button'>로그인</Btn>
                 </div>
 
-                <FlexSt className='f-between' style={{margin:"5% auto",  width: "70%"}}>
-                    <LinkBtn href='#;'>아이디 찾기</LinkBtn>
+                <FlexSt className='f-between linkWrap' style={{margin:"5% auto",  width: "70%"}}>
+                    <Link to="">아이디 찾기</Link>
                     <Stick></Stick>
-                    <LinkBtn href='#;'>비밀번호 찾기</LinkBtn>
+                    <Link to="">비밀번호 찾기</Link>
                     <Stick></Stick>
-                    <LinkBtn href='#;'>회원가입</LinkBtn>
+                    <Link to="/Join" >회원가입</Link>
                 </FlexSt>
                 
                 <h4 className='tc' style={{margin:"5% auto",fontSize:"13px"}}>간편 로그인</h4>
                 <FlexSt className='f-center' style={{marginTop:"5%",width:"40%",margin:"0 auto"}}>
                     <SimpleLo className='mr-20' href="#;" style={{background:"#ffe812"}}><FontAwesomeIcon icon={faComment} /></SimpleLo>
-                    <SimpleLo href="#;" style={{background:"#2db400"}}><FontAwesomeIcon icon={faN}/></SimpleLo>
+                    <SimpleLo className='naverIcon' href="#;" style={{background:"#2db400"}}><FontAwesomeIcon icon={faN}/></SimpleLo>
                 </FlexSt>
             </Inner>
             

@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const Wrap = styled.div`
     max-width: 750px;
-    margin: 0 auto;
+    margin: 5% auto;
     width: 100%
     min-width:375px;
 `
@@ -14,7 +14,7 @@ export const Inner = styled.div`
 export const Tit = styled.h2`
     color: #0450d9;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 `
 
 export const Input = styled.div`
@@ -25,7 +25,7 @@ export const Input = styled.div`
 
 export const EmailInput = styled.input`
     width: 100%;
-    padding: 5% 0 5% 3%;
+    padding: 3% 0 3% 3%;
     background: #E8F0FD;
     border: #ddd;
     border-radius: 5px;
@@ -50,11 +50,7 @@ export const Stick = styled.span`
     height: 13px;
     background: #999;
 `
-export const LinkBtn = styled.a`
-    text-decoration: none;
-    color: #999;
-    font-size: 12px;
-`
+
 export const SimpleLo = styled.a`
     width:35px;
     height:35px;

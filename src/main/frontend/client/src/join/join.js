@@ -1,6 +1,8 @@
 import React, { useState, createContext, useContext, Component, useEffeact } from 'react';
-import {Wrap, Inner, Input, EmailInput,  FlexSt} from './styles/emotion';
+import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit} from './styles/emotion';
 import axios from "axios";
+import './styles/Join.css';
+import { Link } from "react-router-dom";
 
 export default function Join(){
         const [id, setId] = useState('');
@@ -49,10 +51,10 @@ export default function Join(){
     }
 
     return(
-        <Wrap>
+        <Wrap className='joinWrap'>
             <Inner>
-                <a href='#;' style={{textDecoration:"none",color:"#999",fontSize:"12px"}}>이전 페이지</a>
-                <p>정보입력</p>
+                <Link to="/" className="prevBtn">이전 페이지</Link>
+                <Tit>정보입력</Tit>
                 <div>
                     <Input>
                         <p>아이디 입력해주세요.</p>
@@ -68,7 +70,7 @@ export default function Join(){
                         <p>비밀번호 다시 입력해주세요.</p>
                         <EmailInput type="password" value={pwchk} placeholder='입력하신 비밀번호와 동일하게 입력해 주세요.'
                             onChange={ (e) => {setPwChk(e.target.value)} }/>
-                        <p style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
+                            <p className="mb-5" style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
                     </Input>
                     <Input>
                         <p>이메일을 입력해주세요.</p>
