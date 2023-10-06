@@ -4,6 +4,7 @@ import axios from "axios";
 import './styles/Join.css';
 import { Link } from "react-router-dom";
 
+
 export default function Join(){
         const [id, setId] = useState('');
         const [pw, setPw] = useState('');
@@ -53,32 +54,32 @@ export default function Join(){
     return(
         <Wrap className='joinWrap'>
             <Inner>
-                <Link to="/" className="prevBtn">이전 페이지</Link>
+                <Link to={"/"} className="prevBtn">이전 페이지</Link>
                 <Tit>정보입력</Tit>
                 <div>
                     <Input>
-                        <p>아이디 입력해주세요.</p>
+                        <h3>아이디 입력해주세요.</h3>
                         <EmailInput type="text" value={id} placeholder='아이디를 입력하세요.'
-                         onChange={ (e) => { setId(e.target.value) } }/>
+                            onChange={ (e) => { setId(e.target.value) } }/>
                     </Input>
                     <Input>
-                        <p>비밀번호 입력해주세요.</p>
+                        <h3>비밀번호 입력해주세요.</h3>
                         <EmailInput type="password" value={pw} placeholder='6-20자 영문,숫자 특수문자를 조합해서 입력해 주세요.'
-                         onChange={ (e) => { setPw(e.target.value) } }/>
+                            onChange={ (e) => { setPw(e.target.value) } }/>
                     </Input>
                     <Input>
-                        <p>비밀번호 다시 입력해주세요.</p>
+                        <h3>비밀번호 다시 입력해주세요.</h3>
                         <EmailInput type="password" value={pwchk} placeholder='입력하신 비밀번호와 동일하게 입력해 주세요.'
                             onChange={ (e) => {setPwChk(e.target.value)} }/>
-                            <p className="mb-5" style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
+                            <p className="mt-5" style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
                     </Input>
                     <Input>
-                        <p>이메일을 입력해주세요.</p>
+                        <h3>이메일을 입력해주세요.</h3>
                         <FlexSt>
                             <EmailInput type="text" />
-                            @
+                            <p className='ml-5 mr-5'>@</p>
                             <EmailInput type="text" value={email2}/>
-                            <select id="domain-list" onChange={(e) =>{setEmail2(e.target.value)} }>
+                            <select id="domain-list" onChange={(e) =>{setEmail2(e.target.value)} } className='ml-10'>
                                 <option value="naver.com">naver.com</option>
                                 <option value="google.com">google.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
@@ -89,25 +90,26 @@ export default function Join(){
                         </FlexSt>
                     </Input>
                     <Input>
-                        <p>핸드폰 번호 입력해주세요.</p>
+                        <h3>핸드폰 번호 입력해주세요.</h3>
                         <FlexSt>
-                            <select id="phone-list">
+                            <select id="phone-list" className='mr-10'>
                                 <option>010</option>
                                 <option>011</option>
+                                <option>016</option>
                             </select>
                             <EmailInput type="text" placeholder="‘-’ 없이 입력해주세요." maxLength={8}/>
-                            <a href='#;' onClick={(e)=>{
-                               e.preventDefault();
-                               alert("인증번호 발송");
-                               dataSubmit();
-                            }}>인증번호 발송</a>
+                            <button className='ml-10' onClick={(e)=>{
+                                e.preventDefault();
+                                alert("인증번호 발송");
+                                dataSubmit();
+                            }}>인증번호 발송</button>
                         </FlexSt>
                     </Input>
                 </div>
-                <FlexSt>
-                    <a href='#;'>이전</a>
-                    <a href='#;'>P:log 가입</a>
-                </FlexSt>
+                <div className='f-center'>
+                    <Link to={"/"} className='prevbt mr-10'>이전</Link>
+                    <button>P:log 가입</button>
+                </div>
             </Inner>
             
         </Wrap>

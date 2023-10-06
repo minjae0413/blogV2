@@ -11,3 +11,24 @@
     color: #999;
     font-size:12px;
 }
+
+.joinWrap h3{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom:3px;
+}
+
+.joinWrap select{
+  background: #E8F0FD;
+  border: #ddd;
+  border-radius: 5px;
+  padding: 3% 0 3% 3%;
+}
+
+.joinWrap button, .joinWrap .prevbt{
+  background: #0450d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1% 2% ;
+}

@@ -9,7 +9,7 @@ export default function Emotion(){
     return(
         <Wrap className='loginWrap'>
             <Inner>
-                <Link to="/Main" className="prevBtn">이전 페이지</Link>
+                <Link to={"/"} className="prevBtn">이전 페이지</Link>
 
                 <Tit>로그인</Tit>
                 <div>
