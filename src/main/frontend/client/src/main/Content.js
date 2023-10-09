@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
+import {useState} from 'react';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const Content = () =>{
+    const [heart, setHeart] = useState(true);
+
+    function heartClick(){
+        setHeart('♥︎');
+    }
+
     return (
         <div className="Content">
             <div className="MyInfo">
@@ -166,7 +173,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <input type="checkbox" id="book-mark1"/><label htmlFor="book-mark1"></label>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
                         </div>
                     </div>
                     <div className='f-between b_beige'>
@@ -178,7 +185,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <input type="checkbox" id="book-mark1"/><label htmlFor="book-mark1"></label>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
                         </div>
                     </div>
                     <div className='f-between b_pink'>
@@ -190,7 +197,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <input type="checkbox" id="book-mark1"/><label htmlFor="book-mark1"></label>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
                         </div>
                     </div>
                 </div>
