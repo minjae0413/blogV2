@@ -2,22 +2,37 @@ package com.blog.blog.Api;
 
 import com.blog.blog.Service.MemberService;
 import com.blog.blog.DTO.MemberDTO;
-import lombok.RequiredArgsConstructor;
+import com.blog.blog.VO.MemberVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
 
-@RequiredArgsConstructor
+
 @RestController
 @RequestMapping("/api/member")
 public class Member {
     //클라이언트와의 상호작용을 처리하는 컨트롤러 클래스입니다.
-    @Autowired
+
     private final MemberService memberService;
 
+    @Autowired
+    public Member(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
     @PostMapping("/join")
+    public MemberVO addMember(@RequestBody MemberVO memberVO) {
+        return memberService.saveMember(memberVO);
+    }
+
+    @GetMapping("/join")
+    public String memberJoin() {
+        return "redirect:/login";
+    }
+
+
     public ResponseEntity<String> joinMember(@RequestBody MemberDTO memberDTO) {
         // 여기서 MemberDTO는 요청 바디의 JSON 데이터를 자동으로 매핑할 클래스입니다.
         // 실제로는 MemberDTO를 정의하고 필드를 추가해야 합니다.
@@ -30,9 +45,6 @@ public class Member {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/join")
-    public String memberJoin() {
-        return "redirect:/login";
-    }
+
 
 }

@@ -2,10 +2,11 @@ import React, { useState, createContext, useContext, Component, useEffeact } fro
 import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit} from './styles/emotion';
 import axios from "axios";
 import './styles/Join.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 
 
 export default function Join(){
+        const navigate = useNavigate();
         const [id, setId] = useState('');
         const [pw, setPw] = useState('');
         const [pwchk, setPwChk] = useState('');
@@ -31,9 +32,9 @@ export default function Join(){
 
     const dataSubmit = (e) => {
         const data = {
-            'id' : id,
-            'pw' : pw,
-            'email' : email1+'@'+email2,
+            'mb_id' : id,
+            'mb_password' : pw,
+            'mb_email' : email1+'@'+email2,
         };
 
         const jsonData = JSON.stringify(data);
@@ -44,7 +45,8 @@ export default function Join(){
                 },
             })
             .then( response => {
-                console.log(response);
+                alert("회원가입 되었습니다.\n로그인 화면으로 이동합니다.");
+                navigate("/join");
             })
             .catch( error => {
                 console.log(error);
