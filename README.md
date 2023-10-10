@@ -1,8 +1,15 @@
 
 #### sass import 오류 
 
-global.d.ts 생성 후 아래 코드 작성 
-```js
+                                                                                                                                      
+
+#### 231010 axios 설치
+pull받고 npm i 해주세요.
+* 참고 axios 설치
+npm install axios
+
+### global.d.ts 생성 후 아래 코드 작성 
+```js                                                                                                                                                                      
 declare module '*.scss' {
     const content: string;
     export default content;
@@ -10,6 +17,9 @@ declare module '*.scss' {
 ```
 
 #### 날씨 API
+설정키
+REACT_APP_WEATHER_KEY= 5e69b4df49eaf05edcb083aba82ee8fd
+
 
 제공 사이트
 https://openweathermap.org/
