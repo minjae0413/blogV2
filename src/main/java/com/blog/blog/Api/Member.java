@@ -28,8 +28,14 @@ public class Member {
     }
 
     @GetMapping("/join")
-    public String memberJoin() {
-        return "redirect:/login";
+    public MemberVO memberJoin() {
+        MemberVO memberVO = new MemberVO();
+        memberVO.setMb_id("아이디");
+        memberVO.setMb_password("패스워드");
+        memberVO.setMb_email("이메일주소");
+
+        return memberVO;
+        //return "redirect:/login";
     }
 
 
