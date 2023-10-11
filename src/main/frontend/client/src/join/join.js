@@ -13,7 +13,18 @@ export default function Join(){
         const [email1, setEmail1] = useState('');
         const [email2, setEmail2] = useState('');
         const [phone, setPhone] = useState('');
+        /*
+        componentDidMount () {
+            // 데이터 로딩 data loading...
+            // 1. 백엔드 서버를 호출해서 원하는 데이터를 받는다.
+            // 2. 받은 데이터를 이 컴포넌트의 저장소에 저장한다 (setState).
+            // 3. 사용한다.
 
+            fetch ('https://jsonplaceholder.typicode.com/users') //1. => 요청
+              .then (response => response.json ()) // => JSON body 를 JS로 변환
+              .then (response => this.setState ({users: response})); //2.
+        }
+        */
     /*
     useEffeact( () => {
         axios.("https://localhost:9090/api/member/join",{
