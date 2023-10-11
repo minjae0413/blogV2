@@ -26,7 +26,7 @@ const WeatherMain = () => {
           .catch((error) => console.log(error));
       }
     return (
-        <article className="">
+        <article>
 
             
         </article>

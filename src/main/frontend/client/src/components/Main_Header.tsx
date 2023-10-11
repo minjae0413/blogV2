@@ -17,7 +17,7 @@ return(
                     </p>
                 </div>
                 <div className="profile">
-                    <img src={icon03} alt="프로필 이미지"/>
+                    <Link to={"/mypage"} ><img src={icon03} alt="프로필 이미지"/></Link>
                 </div>
             </div>
         </div>

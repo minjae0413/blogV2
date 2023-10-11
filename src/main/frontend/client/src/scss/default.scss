@@ -19,7 +19,6 @@
         .entire_left{
             width: 50%;
             height: auto;
-            margin: 0 auto;
             text-align: center;
 
             img{
@@ -38,7 +37,7 @@
         .entire_right{
             overflow: auto;
             width: 100%;
-            max-width:750px;
+            max-width:640px;
             height: 100%;
             line-height: 1.2;
             background: #fff;
@@ -48,7 +47,7 @@
                 padding-right: 5px;
             }
             &::-webkit-scrollbar-thumb{
-                background: #797979;
+                background: #bbb;
                 border-radius: 4px;
             }
             &::-webkit-scrollbar-track{
@@ -135,7 +134,7 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    max-width: 750px;
+    max-width: 640px;
     z-index: 2;
     box-shadow: 0 -5px 5px rgba(0,0,0,0.1);
 
