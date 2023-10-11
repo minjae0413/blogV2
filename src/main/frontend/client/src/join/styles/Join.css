@@ -25,10 +25,14 @@
   padding: 3% 0 3% 3%;
 }
 
-.joinWrap button, .joinWrap .prevbt{
+.joinWrap button, .joinWrap .prevbt, .findIDWrap button, .findPWWrap .inputWrap button{
   background: #0450d9;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 1% 2% ;
+  padding: 2% 1% ;
+}
+
+.buttonST{
+  width: 15%;
 }

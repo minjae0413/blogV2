@@ -37,9 +37,9 @@ export default function Emotion(){
                 </div>
 
                 <FlexSt className='f-between linkWrap' style={{margin:"5% auto",  width: "70%"}}>
-                    <Link to="">아이디 찾기</Link>
+                    <Link to="/FindID">아이디 찾기</Link>
                     <Stick></Stick>
-                    <Link to="">비밀번호 찾기</Link>
+                    <Link to="/FindPW">비밀번호 찾기</Link>
                     <Stick></Stick>
                     <Link to="/Join" >회원가입</Link>
                 </FlexSt>

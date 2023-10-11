@@ -10,6 +10,8 @@ import Join from "./join/join";
 import Login from "./join/login";
 import Mypage from "./mypage/mypage";
 import Testapi from "./testapi/Testapi";
+import FindID from "./join/findID";
+import FindPW from "./join/findPW";
 
 
 import Main_Header from "./components/Main_Header";
@@ -51,6 +53,8 @@ function App() {
                     <Route path="/join" element={<Join />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/mypage" element={<Mypage />} />
+                    <Route path="/findID" element={<FindID />} />
+                    <Route path="/findPW" element={<FindPW />} />
                     <Route path="/testapi" element={<Testapi />} />
                     <Route path="/writeForm" element={
                       <>
