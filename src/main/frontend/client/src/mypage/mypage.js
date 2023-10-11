@@ -1,12 +1,19 @@
 import './Mypage.css';
 import { Link } from "react-router-dom";
+import logoBlue from "../img/logo_blue.png";
+import icon05 from "../img/icon05.png";
 
 export default function Mypage() {
   return (
     <div className="Mypage">
-      <div className='logo'></div>
+      <div className='logo'>
+        <img src={logoBlue} alt="로고"/>
+        <h2>P:LOG</h2>
+      </div>
       <div className='profile'>
-        <div className='profileImg'></div>
+        <div className='profileImg'>
+          <img src={icon05} alt="프로필 이미지"/>
+        </div>
         <p className='profileName'>홍길동</p>
       </div>
       <div className='Menu'>

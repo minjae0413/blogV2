@@ -1,5 +1,9 @@
 import {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
+import icon01 from "../img/icon01.png";
+import icon02 from "../img/icon02.png";
+import icon03 from "../img/icon03.png";
+import icon04 from "../img/icon04.png";
 
 const Main_Header:any= () =>{
 return(
@@ -13,7 +17,7 @@ return(
                     </p>
                 </div>
                 <div className="profile">
-                    <img src="" alt=""/>
+                    <img src={icon03} alt="프로필 이미지"/>
                 </div>
             </div>
         </div>

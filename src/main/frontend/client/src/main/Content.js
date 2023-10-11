@@ -103,8 +103,7 @@ const Content = () =>{
                     <SwiperSlide><span>#리액트빠이팅</span></SwiperSlide>
                     <SwiperSlide><span>#출근</span></SwiperSlide>
                     <SwiperSlide><span>#아시안게임빠이팅</span></SwiperSlide>
-                    <SwiperSlide><span>#김우민3관왕</span></SwiperSlide>
-                    <SwiperSlide><span>#아시안게임야구</span></SwiperSlide>
+                    <SwiperSlide><span>#아시안게임야구우승</span></SwiperSlide>
                 </Swiper>
             </div>
             <div className="BestBlog ov">
@@ -166,10 +165,10 @@ const Content = () =>{
                 <div className="live-list">
                     <div className='f-between b_blue3'>
                         <div className='list-con'>
-                            <p className='list-tit'>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 </p>
+                            <p className='list-tit'>개발 2팀 아자아자 빠이팅 !!!</p>
                             <div className='f-box'>
-                                <span>글쓴이</span>
-                                <span>0000.00.00</span>
+                                <span>ㅂㅎㅈ</span>
+                                <span>2023.10.11</span>
                             </div>
                         </div>
                         <div class="bookMark">

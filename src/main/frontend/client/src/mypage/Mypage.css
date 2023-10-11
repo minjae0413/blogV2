@@ -17,15 +17,23 @@ a{
 }
 
 .logo{
-  width: 100px;height: 80px;
-  background: tomato;
+  width: 100px;
   margin: 50px auto 20px;
 }
+
+.logo h2{
+  color:#065ED9;
+}
+
 .profileImg{
   width: 100px;height: 100px;
   border-radius: 30px;
-  background: yellow;
-  margin: 0 auto 5%;
+  margin: 0 auto 1%;
+}
+
+.profileImg img{
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 15px 15px #e1e1e1;
 }
 
 .profileName{
@@ -34,7 +42,10 @@ a{
   font-weight: bold;
 }
 
-.Menu ul{width: 60%;margin: 0 auto;}
+.Menu ul{
+  width: 60%;
+  margin: 5% auto;
+}
 
 .Menu ul li{
   border-bottom: 1px solid #ddd;

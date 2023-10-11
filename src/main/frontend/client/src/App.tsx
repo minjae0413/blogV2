@@ -17,6 +17,13 @@ import Footer from "./components/Footer"
 import BoardEditor from "./components/board/BoardEditor";
 import WeatherMain from "./components/weather/WeatherMain";
 
+import mainLogo from "./img/logo.png";
+import icon01 from "./img/icon01.png";
+import icon02 from "./img/icon02.png";
+import icon03 from "./img/icon03.png";
+import icon04 from "./img/icon04.png";
+
+
 function App() {
   const [ message, setMessage ] = useState([]);
 
@@ -25,11 +32,13 @@ function App() {
         .then(res => res.json())
         .then(data => setMessage(data));
   }, []);
-
+  
   return (
       <div className="App">
           <div className="flex-box">
-              <div className='entire_left'></div>
+              <div className='entire_left'>
+                <img src={mainLogo} alt="플로그 로고" />
+              </div>
               <div className='entire_right'>
                 <Routes>
                     <Route path="/" element={

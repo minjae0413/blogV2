@@ -19,6 +19,20 @@
         .entire_left{
             width: 50%;
             height: auto;
+            margin: 0 auto;
+            text-align: center;
+
+            img{
+                width: 40%;
+                vertical-align: middle;
+            }
+            &::after{
+                display: inline-block;
+                height: 100%;
+                content: "";
+                vertical-align: middle;
+            }
+
         }
         
         .entire_right{
@@ -96,11 +110,15 @@
         }
         
         .profile{
-            border: 1px solid #f00;
             display: block;
             width: 75px;
             height: 75px;
             border-radius: 15px;
+
+            img{
+                width: 100%;
+                border-radius: 15px;
+            }
         }
 
         .userName{
@@ -109,7 +127,6 @@
         }
     }
 }
-
 
 
 /* footer */
