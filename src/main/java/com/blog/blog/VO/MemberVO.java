@@ -9,7 +9,7 @@ public class MemberVO {
         // 회원 정보 표현하는 객체 데이터베이스 테이블과 매핑 될 수 있다
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-    	private Integer No;
+    	private Long no;
         private String mb_id;
         private String mb_password;
         private String mb_name;
@@ -54,13 +54,9 @@ public class MemberVO {
         private String mb_profile;
         private String mb_memo_call;
 
-        public Integer getNo() {
-                return No;
-        }
+        public Long getNo() { return no; }
 
-        public void setNo(Integer no) {
-                No = no;
-        }
+        public void setNo(Long no) { this.no = no; }
 
         public String getMb_id() {
                 return mb_id;

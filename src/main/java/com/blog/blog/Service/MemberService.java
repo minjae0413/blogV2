@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberService {
     // 서비스 기능 파일
-    private final IF_MemberDAO memberDAO;
-
     @Autowired
-    public MemberService(IF_MemberDAO memberDAO) {
-        this.memberDAO = memberDAO;
+    private IF_MemberDAO memberDAO;
+
+    public MemberVO findByNo(Long no) {
+        return memberDAO.findByNo(no);
     }
 
     public MemberVO saveMember(MemberVO member) {

@@ -16,7 +16,7 @@ export default function Join(){
 
   useEffect(() => {
     // 서버에서 데이터를 호출
-    axios.get('http://localhost:9090/api/member/join')
+    axios.get('http://localhost:9090/api/member/join/3')
       .then((response) => {
         // 서버 응답을 처리하고 상태를 업데이트
         console.log(response.data);
