@@ -1,4 +1,7 @@
 
+.Content{
+    padding-bottom:80px;
+}
 
 /* 슬라이드 */
 .swiper-content {
@@ -19,8 +22,8 @@
             overflow: hidden;
             height: auto !important;
 
-            *{
-              color:#fff;
+            * {
+                color:#fff;
             }
 
             a{
@@ -48,10 +51,10 @@
                         font-size: 16px;
                     }
                 }
-          
+        
                 .slide-info {
                     margin-top: 10px;
-          
+        
                     strong{
                         font-size: 54px;
                         font-weight: bold;
@@ -70,7 +73,7 @@
             
                     .time-info{
                         display: flex;
-              
+            
                         > div{
                             margin-right: 10%;
                 
@@ -182,7 +185,7 @@
                 }
 
                 .heart{
-                 color:#f00;   
+                    color:#f00;   
                 }
             }
         }

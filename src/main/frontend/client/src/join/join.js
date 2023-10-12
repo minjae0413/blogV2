@@ -14,17 +14,18 @@ export default function Join(){
         const [email2, setEmail2] = useState('');
         const [phone, setPhone] = useState('');
 
-  useEffect(() => {
-    // 서버에서 데이터를 호출
-    axios.get('http://localhost:9090/api/member/join/3')
-      .then((response) => {
-        // 서버 응답을 처리하고 상태를 업데이트
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error('데이터 호출 중 오류 발생:', error);
-      });
-  }, []);
+
+    useEffect(() => {
+        // 서버에서 데이터를 호출
+        axios.get('http://localhost:9090/api/member/join/3')
+        .then((response) => {
+            // 서버 응답을 처리하고 상태를 업데이트
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.error('데이터 호출 중 오류 발생:', error);
+        });
+    }, []);
 
     /*
     useEffeact( () => {
@@ -92,8 +93,9 @@ export default function Join(){
                         <FlexSt>
                             <EmailInput type="text" />
                             <p className='ml-5 mr-5'>@</p>
-                            <EmailInput type="text" value={email2}/>
+                            <EmailInput type="text" value={email2} id="email"/>
                             <select id="domain-list" onChange={(e) =>{setEmail2(e.target.value)} } className='ml-10'>
+                                <option value="type">직접입력</option>
                                 <option value="naver.com">naver.com</option>
                                 <option value="google.com">google.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
@@ -103,6 +105,7 @@ export default function Join(){
 
                         </FlexSt>
                     </Input>
+
                     <Input>
                         <h3>핸드폰 번호 입력해주세요.</h3>
                         <FlexSt>
@@ -118,6 +121,11 @@ export default function Join(){
                                 dataSubmit();
                             }}>인증번호 발송</button>
                         </FlexSt>
+                    </Input>
+
+                    <Input>
+                        <h3>인증번호를 입력해주세요.</h3>
+                        <EmailInput type="text" value="" placeholder='인증번호를 입력하세요.' onChange=""/>
                     </Input>
                 </div>
                 <div className='f-center'>
