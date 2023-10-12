@@ -14,6 +14,7 @@ const Content = () =>{
     }
 
     return (
+        
         <div className="Content">
             <div className="MyInfo">
                 <Swiper
@@ -22,7 +23,7 @@ const Content = () =>{
                     height={200}
                 >
                     <SwiperSlide className="b_blue2">
-                        <Link to={'/weather'}>
+                        <Link to={'/Weather'}>
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     현재 날씨는?<br/>
@@ -37,7 +38,7 @@ const Content = () =>{
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className='b_blue'>
-                        <Link>
+                        <Link to={'/Calorie'}>
                             <div className="slide-left">
                                 <div className="slide-tit">
                                     오늘 섭취 칼로리<br/>

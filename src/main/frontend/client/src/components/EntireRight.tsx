@@ -10,6 +10,7 @@ import Main_Header from "./Main_Header";
 import Footer from "./Footer"
 import BoardEditor from "./board/BoardEditor";
 import WeatherMain from "./weather/WeatherMain";
+import CalorieMain from "./calorie/CalorieMain";
 import mainLogo from ".,/img/logo.png";
 const Entire_right = () =>{
     return(
@@ -39,6 +40,13 @@ const Entire_right = () =>{
               <>
                 <Main_Header/>
                 <WeatherMain/>
+                <Footer/>
+              </>
+            } />
+            <Route path="/Calorie" element={
+              <>
+                <Main_Header/>
+                <CalorieMain/>
                 <Footer/>
               </>
             } />
