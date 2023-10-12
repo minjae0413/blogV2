@@ -1,5 +1,5 @@
 import Content from "./Content.js";
-import "../scss/Main.scss";
+import "../../scss/Main.scss";
 
 
 const Main = () => {

@@ -1,5 +1,5 @@
 
-import mainLogo from "./img/logo.png";
+import mainLogo from "../img/logo.png";
 
 const EntireRight = () =>{
  return (

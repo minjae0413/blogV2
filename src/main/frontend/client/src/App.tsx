@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link} from "react-router-dom";
 import EntireRight from "./components/EntireRight";
 import EntireLeft from "./components/EntireLeft";
-import "./scss/common.scss";
 import "./scss/default.scss";
+import "./scss/common.scss";
 
 
 function App() {
