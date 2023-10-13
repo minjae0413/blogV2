@@ -15,9 +15,9 @@ const CalorieMain = () =>{
         .then( (header) => {
             const jsonData = header.data;
             const returnval = jsonData['body']['items'];
+            const selectOption = "";
             returnval.forEach((el:any,idx:Number)=> {
-                console.log("    el:", el)
-                console.log("    foodInfo:", foodInfo)
+                
             });
           
         })
@@ -50,7 +50,7 @@ const CalorieMain = () =>{
             </ul>
             
             <div>
-                <select name="" id="">
+                <select name="" id="FoodList">
                     
                 </select>
             </div>
