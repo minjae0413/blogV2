@@ -4,7 +4,7 @@ import axios from "axios";
 import './styles/Join.css';
 import { Link, useNavigate  } from "react-router-dom";
 
-export default function findID(){
+export default function FindID(){
 
     return(
         <Wrap className='findIDWrap'>

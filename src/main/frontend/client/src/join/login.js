@@ -1,7 +1,7 @@
 import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, SimpleLo} from './styles/Emotion'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './styles/Join.css';
 
 export default function Emotion(){

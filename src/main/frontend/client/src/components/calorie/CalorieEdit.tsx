@@ -40,7 +40,7 @@ const CalorieEdit = () =>{
                     if(el['DESC_KOR'] == returnval[idx-1]['DESC_KOR']){
     
                         console.log("    returnval[idx-1]:", returnval[idx-1])
-                        return (parseInt(el['BGN_YEAR']) <= parseInt(returnval[idx-1]['BGN_YEAR'])) ? el : returnval[idx-1];
+                        return (parseInt(el['BGN_YEAR']) > parseInt(returnval[idx-1]['BGN_YEAR'])) ? el : returnval[idx-1];
                     }
                 }
             })
