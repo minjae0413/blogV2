@@ -2,8 +2,15 @@ import '../scss/Mypage.scss';
 import { Link } from "react-router-dom";
 import logoBlue from "../img/logo_blue.png";
 import icon05 from "../img/icon05.png";
+import { useSelector } from 'react-redux';
+
 
 const Mypage =()=>{
+  let ReduxState:any = useSelector((state)=>{return state})
+  //변수에 담아 사용, 특정 state 불러올때는 ReduxState.state명
+  //예시
+  console.log(ReduxState.user)
+
   return (
     <section className="Mypage">
       <div className='logo'>
