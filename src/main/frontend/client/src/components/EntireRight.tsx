@@ -1,17 +1,19 @@
 import { Route, Routes, Link} from "react-router-dom";
 import Main from "./main/Main";
-import Join from "../join/join";
-import Login from "../join/login";
+import Join from "../join/Join";
+import Login from "../join/Login";
 import Mypage from "./Mypage";
 import Testapi from "../testapi/Testapi";
-import FindID from "../join/findID";
-import FindPW from "../join/findPW";
+import FindID from "../join/FindID";
+import FindPW from "../join/FindPW";
 import Main_Header from "./Main_Header";
 import Footer from "./Footer"
 import BoardEditor from "./board/BoardEditor";
 import WeatherMain from "./weather/WeatherMain";
 import CalorieMain from "./calorie/CalorieMain";
+
 import mainLogo from ".,/img/logo.png";
+
 const Entire_right = () =>{
     return(
         <div className='entire_right'>

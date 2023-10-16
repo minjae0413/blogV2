@@ -50,8 +50,6 @@
                 background: #bbb;
                 border-radius: 4px;
             }
-            &::-webkit-scrollbar-track{
-            }
 
             .Header{
                 background: #fff;
@@ -158,3 +156,38 @@
 
 
 
+@media (max-width: 750px) {
+    .App > .flex-box{
+        display: block;
+    }
+
+    .App{
+        padding: unset;
+        background: none;
+        
+        .flex-box{
+
+            .entire_left{
+                display: none;
+            }
+
+            .entire_right{
+                max-width: 100%;
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                
+                .Footer{
+                    width: 100%;
+                    max-width: 750px;
+                }
+            }
+    
+        }
+    }
+    .flex-box{
+        display: block;
+    }
+
+}

@@ -9,12 +9,12 @@ return(
         <div className="Footer Wrap">
             <ul>
                 <li>
-                    <Link to={""}>
+                    <Link to={"/Calorie"}>
                         <FontAwesomeIcon icon={faBowlFood} /><p className="ir">잇로그</p>
                     </Link>
                 </li>
                 <li>
-                    <Link to={""}>
+                    <Link to={"/Weather"}>
                         <FontAwesomeIcon icon={faCalendar} /><p className="ir">캘린더</p>
                     </Link>
                 </li>

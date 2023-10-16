@@ -2,15 +2,19 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import {useState} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as FaHeartRegular } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const Content = () =>{
+
     const [heart, setHeart] = useState(true);
 
     function heartClick(){
-        setHeart('♥︎');
+        setHeart( <FontAwesomeIcon icon={faHeart} />);
     }
 
     return (
@@ -173,7 +177,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon className="heartLike" size="lg" icon={faHeart} />}</span>
                         </div>
                     </div>
                     <div className='f-between b_beige'>
@@ -185,7 +189,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon  className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon size="lg" className="heartLike" icon={faHeart} />}</span>
                         </div>
                     </div>
                     <div className='f-between b_pink'>
@@ -197,7 +201,7 @@ const Content = () =>{
                             </div>
                         </div>
                         <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? '♡' : '♥︎'}</span>
+                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon className="heartLike" size="lg" icon={faHeart} />}</span>
                         </div>
                     </div>
                 </div>

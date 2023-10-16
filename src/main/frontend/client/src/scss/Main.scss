@@ -186,6 +186,10 @@
 
                 .heart{
                     color:#f00;   
+
+                    svg> path{
+                        color:#fd2e43;
+                    }
                 }
             }
         }
@@ -199,5 +203,54 @@
 @media (min-width: 750px) {
     .App .entire_left{
         display: block;
+    }
+}
+
+@media (max-width: 750px){
+    .MainWrap{
+
+        h3{
+            font-size: 18px;
+        }
+    
+        .MyInfo {
+            .swiper-slide {
+
+                a{
+                    padding: 20px;
+                }
+    
+                .slide-left{
+                
+                    .slide-tit{
+                        font-size: 24px;
+                        line-height: 1.4rem;
+                
+                        span{
+                            font-size: 16px;
+                        }
+                    }
+            
+                    .slide-info {
+                        margin-top: 10px;
+            
+                        strong{
+                            font-size: 54px;
+                        }
+                
+                        span{
+                            font-size: 22px;
+                            &.t2{
+                                font-size: 18px;
+                            }
+                            &.t3{
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
     }
 }

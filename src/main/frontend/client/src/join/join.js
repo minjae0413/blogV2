@@ -1,5 +1,5 @@
 import React, { useState, createContext, useContext, Component, useEffeact, useEffect } from 'react';
-import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit} from './styles/emotion';
+import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit} from './styles/Emotion';
 import axios from "axios";
 import './styles/Join.css';
 import { Link, useNavigate  } from "react-router-dom";
