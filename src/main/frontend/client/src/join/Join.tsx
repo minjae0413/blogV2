@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, Component, useEffeact, useEffect } from 'react';
+import React, { useState ,useEffect} from 'react';
 import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit} from './styles/Emotion';
 import axios from "axios";
 import './styles/Join.css';
@@ -43,7 +43,7 @@ export default function Join(){
     })
     */
 
-    const dataSubmit = (e) => {
+    const dataSubmit = () => {
         const data = {
             'mb_id' : id,
             'mb_password' : pw,
@@ -125,7 +125,7 @@ export default function Join(){
 
                     <Input>
                         <h3>인증번호를 입력해주세요.</h3>
-                        <EmailInput type="text" value="" placeholder='인증번호를 입력하세요.' onChange=""/>
+                        <EmailInput type="text" value="" placeholder='인증번호를 입력하세요.'/>
                     </Input>
                 </div>
                 <div className='f-center'>

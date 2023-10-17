@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, Component, useEffeact } from 'react';
+// import React, { useState, createContext, useContext, Component,} from 'react';
 import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit,Stick,Btn} from './styles/Emotion';
 import axios from "axios";
 import './styles/Join.css';
@@ -29,7 +29,7 @@ export default function FindID(){
                     </Input>
                 </div>
                 <div className='tc'>
-                    <Btn lassName='ml-10' onClick={(e)=>{}} type='button'>확인</Btn>
+                    <Btn className='ml-10' onClick={(e)=>{}} type='button'>확인</Btn>
                 </div>
             </Inner>
             

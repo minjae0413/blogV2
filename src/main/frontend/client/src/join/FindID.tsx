@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, Component, useEffeact } from 'react';
+// import React, { useState, createContext, useContext, Component, useEffeact } from 'react';
 import {Wrap, Inner, Input, EmailInput,  FlexSt, Tit,Stick} from './styles/Emotion';
 import axios from "axios";
 import './styles/Join.css';

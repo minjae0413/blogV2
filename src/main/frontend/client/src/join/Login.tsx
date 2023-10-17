@@ -1,4 +1,4 @@
-import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, LinkBtn, SimpleLo} from './styles/Emotion'
+import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, SimpleLo} from './styles/Emotion'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -24,11 +24,11 @@ export default function Emotion(){
                 <FlexSt className='f-center'>
                     <FlexSt className='mr-20'>
                         <input type='checkbox' id='keepLogin' />
-                        <label for='keepLogin'>로그인 상태 유지</label>
+                        <label htmlFor='keepLogin'>로그인 상태 유지</label>
                     </FlexSt>
                     <FlexSt>
                         <input type='checkbox' id='saveId' />
-                        <label for='saveId'>아이디 저장하기</label>
+                        <label htmlFor='saveId'>아이디 저장하기</label>
                     </FlexSt>
                 </FlexSt>
 
