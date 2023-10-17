@@ -1,3 +1,18 @@
+#### 230927 커밋메세지
+    - FEAT : 새로운 기능의 추가
+    - FIX: 버그 수정
+    - DOCS: 문서 수정
+    - STYLE: 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우)
+    - REFACTOR: 코드 리펙토링
+    - TEST: 테스트 코트, 리펙토링 테스트 코드 추가
+    - CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)
+    - ADD: 새로운 파일 추가
+
+
+231017 화요일
+npm i 해서 업데이트하길바람. 캘린더로 인해 새로운 라이브러리 설치
+.....
+
 npm start 이슈 발생시 client\package.json 에서  
 "proxy": "http://localhost:9090" 지우면 됨
 -> api 연결로인해 생긴 이슈로 보임
@@ -51,15 +66,6 @@ https://velog.io/@sean2337/React-OpenWeather-API%EB%A1%9C-%EC%9B%B9%EC%97%90%EC%
 https://www.data.go.kr/data/15050912/fileData.do#tab-layer-openapi
 
 [공공데이터 포털/ 사이트 내 가이드 참고바람]
-#### 230927 커밋메세지
-- FEAT : 새로운 기능의 추가
-- FIX: 버그 수정
-- DOCS: 문서 수정
-- STYLE: 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우)
-- REFACTOR: 코드 리펙토링
-- TEST: 테스트 코트, 리펙토링 테스트 코드 추가
-- CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우)
-- ADD: 새로운 파일/ 기능 추가
 #### 230925 sass, fontawesome 셋팅
 
 pull 받은 다은 터미널-> npm i 해서 다운로드 
