@@ -15,6 +15,7 @@ export const Tit = styled.h2`
     color: #0450d9;
     text-align: center;
     margin-bottom: 5%;
+    font-weight:bold;
 `
 
 export const Input = styled.div`

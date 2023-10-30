@@ -19,7 +19,7 @@ function App() {
       <div className="App">
           <div className="flex-box">
             <EntireLeft></EntireLeft>
-             <EntireRight></EntireRight>
+            <EntireRight></EntireRight>
           </div>
       </div>
   );

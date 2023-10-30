@@ -1,15 +1,20 @@
 import {Wrap, Inner, Input, EmailInput, Tit, FlexSt, Btn, Stick, SimpleLo} from './styles/Emotion'
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import './styles/Join.css';
 
 export default function Emotion(){
+    const navigate = useNavigate();
+    const onClickBtn = () => {
+        navigate(-1); 
+    };
 
     return(
         <Wrap className='loginWrap'>
             <Inner>
-                <Link to={"/"} className="prevBtn">이전 페이지</Link>
+                <a onClick={onClickBtn} className="prevBtn">이전 페이지</a>
 
                 <Tit>로그인</Tit>
                 <div>

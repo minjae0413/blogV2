@@ -1,4 +1,4 @@
-import { Route, Routes, Link} from "react-router-dom";
+import { Route, Routes, Link, useNavigate} from "react-router-dom";
 import Main from "./main/Main";
 import Join from "../join/Join";
 import Login from "../join/Login";
@@ -12,9 +12,10 @@ import BoardEditor from "./board/BoardEditor";
 import WeatherMain from "./weather/WeatherMain";
 import CalorieMain from "./calorie/CalorieMain";
 
-import mainLogo from ".,/img/logo.png";
+import mainLogo from "../img/logo.png";
 
 const Entire_right = () =>{
+
     return(
         <div className='entire_right'>
         <Routes>
