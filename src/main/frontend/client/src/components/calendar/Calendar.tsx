@@ -1,4 +1,4 @@
-import styles from "../../scss/calendar.scss";
+import "../../scss/calendar.scss";
 import React, {useState, useEffect} from "react";
 import { faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,13 +43,13 @@ const Calendar = () =>{
   
     const dayWeek:string[] =['월','화','수','목','금','토','일'];
     return(
-        <div>
-            <div>
+        <div className="MainWrap">
+            <div className="f-center">
                 <button onClick={()=>{ setMoment(getMoment.clone().subtract(1, 'month')) }}><FontAwesomeIcon icon={faAngleLeft} /></button>
                 <p><span>{today.format('YYYY')}</span>{today.format('MM')}</p>
                 <button onClick={()=>{ setMoment(getMoment.clone().add(1, 'month')) }}><FontAwesomeIcon icon={faAngleRight} /></button>
             </div>
-            <table>
+            <table className="Calendar_wrap">
                 <thead>
                     {
                         dayWeek.map((week, i)=>{

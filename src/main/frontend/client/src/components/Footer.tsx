@@ -14,7 +14,7 @@ return(
                     </Link>
                 </li>
                 <li>
-                    <Link to={"/Weather"}>
+                    <Link to={"/Calendar"}>
                         <FontAwesomeIcon icon={faCalendar} /><p className="ir">캘린더</p>
                     </Link>
                 </li>

@@ -11,6 +11,8 @@ import Footer from "./Footer"
 import BoardEditor from "./board/BoardEditor";
 import WeatherMain from "./weather/WeatherMain";
 import CalorieMain from "./calorie/CalorieMain";
+import Calendar from "./calendar/Calendar";
+
 
 import mainLogo from "../img/logo.png";
 
@@ -50,6 +52,13 @@ const Entire_right = () =>{
               <>
                 <Main_Header/>
                 <CalorieMain/>
+                <Footer/>
+              </>
+            } />
+            <Route path="/Calendar" element={
+              <>
+                <Main_Header/>
+                <Calendar/>
                 <Footer/>
               </>
             } />
