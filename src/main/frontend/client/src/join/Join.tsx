@@ -6,14 +6,17 @@ import { Link, useNavigate  } from "react-router-dom";
 
 
 export default function Join(){
-        const navigate = useNavigate();
-        const [id, setId] = useState('');
-        const [pw, setPw] = useState('');
-        const [pwchk, setPwChk] = useState('');
-        const [email1, setEmail1] = useState('');
-        const [email2, setEmail2] = useState('');
-        const [phone, setPhone] = useState('');
+    const navigate = useNavigate();
 
+    const [id, setId] = useState('');
+    const [pw, setPw] = useState('');
+    const [pwchk, setPwChk] = useState('');
+    const [email1, setEmail1] = useState('');
+    const [email2, setEmail2] = useState('');
+    const [phone1, setPhone1] = useState('010');
+    const [phone2, setPhone2] = useState('');
+
+    const regex = /^[0-9]+$/;
 
     useEffect(() => {
         // 서버에서 데이터를 호출
@@ -44,13 +47,44 @@ export default function Join(){
     */
 
     const dataSubmit = () => {
+        if (id == '') {
+            console.log("id");
+            return false;
+        }
+
+        if (pw == '') {
+            console.log("pw");
+            return false;
+        } else if (pw != pwchk) {
+            console.log("pw : pwchk");
+            return false;
+        }
+
+        if (email1 == '') {
+            console.log("email1");
+            return false;
+        } else if (email2 == '') {
+            console.log("email2");
+            return false;
+        }
+
+        if (phone1 == '') {
+            console.log("phone1");
+            return false;
+        } else if (phone2 == '') {
+            console.log("phone2");
+            return false;
+        }
+
         const data = {
-            'mb_id' : id,
-            'mb_password' : pw,
-            'mb_email' : email1+'@'+email2,
+            'mbId' : id,
+            'mbPassword' : pw,
+            'mbEmail' : email1+'@'+email2,
+            'mbHp' : phone1+''+phone2,
         };
 
         const jsonData = JSON.stringify(data);
+        console.log(jsonData);
 
         axios.post('http://localhost:9090/api/member/join', jsonData, {
                 headers: {
@@ -91,10 +125,11 @@ export default function Join(){
                     <Input>
                         <h3>이메일을 입력해주세요.</h3>
                         <FlexSt>
-                            <EmailInput type="text" />
+                            <EmailInput type="text" value={email1}
+                                onChange={ (e) => { setEmail1(e.target.value) } }/>
                             <p className='ml-5 mr-5'>@</p>
-                            <EmailInput type="text" value={email2} id="email"/>
-                            <select id="domain-list" onChange={(e) =>{setEmail2(e.target.value)} } className='ml-10'>
+                            <EmailInput type="text" id="email" value={email2} />
+                            <select id="domain-list" className='ml-10' onChange={(e) =>{setEmail2(e.target.value)} } >
                                 <option value="type">직접입력</option>
                                 <option value="naver.com">naver.com</option>
                                 <option value="google.com">google.com</option>
@@ -109,16 +144,24 @@ export default function Join(){
                     <Input>
                         <h3>핸드폰 번호 입력해주세요.</h3>
                         <FlexSt>
-                            <select id="phone-list" className='mr-10'>
+                            <select id="phone-list" className='mr-10' onChange={(e) => {setPhone1(e.target.value)} } >
                                 <option>010</option>
                                 <option>011</option>
                                 <option>016</option>
                             </select>
-                            <EmailInput type="text" placeholder="‘-’ 없이 입력해주세요." maxLength={8}/>
+                            <EmailInput type="text" placeholder="‘-’ 없이 입력해주세요." maxLength={8}
+                                onChange={(e) => {
+                                    e.preventDefault();
+                                    if (regex.test(e.target.value)) {
+                                        setPhone2(e.target.value);
+                                    } else {
+                                        alert('숫자만 입력 부탁 드립니다.');
+                                    }
+                                }}
+                            />
                             <button className='ml-10' onClick={(e)=>{
                                 e.preventDefault();
                                 alert("인증번호 발송");
-                                dataSubmit();
                             }}>인증번호 발송</button>
                         </FlexSt>
                     </Input>
@@ -130,10 +173,12 @@ export default function Join(){
                 </div>
                 <div className='f-center'>
                     <Link to={"/"} className='prevbt mr-10'>이전</Link>
-                    <button>P:log 가입</button>
+                    <button onClick={(e)=>{
+                        e.preventDefault();
+                        dataSubmit();
+                    }}>P:log 가입</button>
                 </div>
             </Inner>
-            
         </Wrap>
 
     )

@@ -1,6 +1,6 @@
 package com.blog.blog.Api;
 
-import com.blog.blog.Service.MemberService;
+import com.blog.blog.DAO.IF_MemberDAO;
 import com.blog.blog.VO.MemberVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,23 +17,23 @@ import java.util.Map;
 public class Member {
     //클라이언트와의 상호작용을 처리하는 컨트롤러 클래스입니다.
     @Autowired
-    private MemberService memberService;
+    private IF_MemberDAO if_memberDAO;
 
     @PostMapping("/join")
-    public MemberVO addMember(@RequestBody MemberVO memberVO) {
-        return memberService.saveMember(memberVO);
+    public ResponseEntity<?> addMember(@RequestBody MemberVO memberVO) {
+        try {
+            MemberVO savedMember = if_memberDAO.save(memberVO);
+            return new ResponseEntity<>(savedMember, HttpStatus.CREATED);
+        } catch (Exception e) {
+            Map<String, String> response = new HashMap<>();
+            response.put("error", "회원가입에 실패했습니다.");
+            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @GetMapping("/join/{no}")
     public ResponseEntity<?> memberJoin(@PathVariable Long no) {
-        /*
-        MemberVO memberVO = new MemberVO();
-        memberVO.setMb_id("아이디");
-        memberVO.setMb_password("패스워드");
-        memberVO.setMb_email("이메일주소");
-        return memberVO;
-        */
-        MemberVO memberVO = memberService.findByNo(no);
+        MemberVO memberVO = this.if_memberDAO.findByNo(no);
         if (memberVO != null) {
             return new ResponseEntity<>(memberVO, HttpStatus.OK);
         } else {
@@ -41,13 +41,22 @@ public class Member {
             response.put("message", "회원을 찾을 수 없습니다.");
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
-
-        //return "redirect:/login";
     }
+
+    @GetMapping("/login")
+    public ResponseEntity<?> memberLogin(@RequestBody MemberVO data) {
+        MemberVO memberVO = this.if_memberDAO.findByMbId(data.getMbId());
+        if (memberVO != null) {
+            return new ResponseEntity<>(memberVO, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
+
 
     @GetMapping("/list")
     public List<MemberVO> getMemberList() {
-        return memberService.getMemberList();
+        return this.if_memberDAO.findAll();
     }
 
 
