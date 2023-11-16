@@ -2,6 +2,7 @@ package com.blog.blog.Api;
 
 import com.blog.blog.DAO.IF_MemberDAO;
 import com.blog.blog.VO.MemberVO;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,16 +44,34 @@ public class Member {
         }
     }
 
-    @GetMapping("/login")
-    public ResponseEntity<?> memberLogin(@RequestBody MemberVO data) {
+    @PostMapping("/login")
+    public ResponseEntity<?> memberLogin(@RequestBody MemberVO data, HttpSession session) {
         MemberVO memberVO = this.if_memberDAO.findByMbId(data.getMbId());
+
         if (memberVO != null) {
-            return new ResponseEntity<>(memberVO, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            if (memberVO.getMbPassword().equals(data.getMbPassword())) {
+                session.setAttribute("userId", memberVO.getMbId());
+                String userId = (String) session.getAttribute("userId");
+                System.out.println(userId);
+                return new ResponseEntity<>(memberVO, HttpStatus.OK);
+            }
         }
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @GetMapping("/sessionInfo")
+    public ResponseEntity<Map<String, Object>> getSessionInfo(HttpSession session) {
+        String userId = (String) session.getAttribute("userId");
+        if (userId == null ) {
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+        }
+
+        Map<String, Object> sessionInfo = new HashMap<>();
+
+        sessionInfo.put("userId", userId);
+        return ResponseEntity.ok(sessionInfo);
+    }
 
     @GetMapping("/list")
     public List<MemberVO> getMemberList() {

@@ -5,7 +5,6 @@ import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import React, { useState ,useEffect } from 'react';
 import axios from "axios";
-//import { Session } from "react-session-api";
 import './styles/Join.css';
 
 export default function Emotion(){
@@ -17,8 +16,8 @@ export default function Emotion(){
     const onClickBtn = () => {
         navigate(-1); 
     };
-    const dataSubmit = () => {
 
+    const dataSubmit = () => {
         const data = {
             'mbId' : id,
             'mbPassword' : pw,
@@ -32,9 +31,7 @@ export default function Emotion(){
             },
         })
         .then( response => {
-            //let member = {"id":response.mb_id, "name":response.mb_name};
-            //Session.set("member", member);
-
+            //console.log(response);
             navigate("/");
         })
         .catch( error => {
