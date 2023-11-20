@@ -18,7 +18,7 @@ const Content = () =>{
         newHeartStatus[index] = !newHeartStatus[index];
         setHeartStatus(newHeartStatus);
     };
-    
+
     const renderLiveItem = (index, color) => {
         return (
         <div className={`f-between b_${color}`} key={index}>
@@ -132,8 +132,8 @@ const Content = () =>{
                     <SwiperSlide><span>#개발2팀빠이팅</span></SwiperSlide>
                     <SwiperSlide><span>#리액트빠이팅</span></SwiperSlide>
                     <SwiperSlide><span>#출근</span></SwiperSlide>
-                    <SwiperSlide><span>#아시안게임빠이팅</span></SwiperSlide>
-                    <SwiperSlide><span>#아시안게임야구우승</span></SwiperSlide>
+                    <SwiperSlide><span>#엘지가우승했지롱~~~~</span></SwiperSlide>
+                    <SwiperSlide><span>#29년만에우승했다~~</span></SwiperSlide>
                 </Swiper>
             </div>
             <div className="BestBlog ov">

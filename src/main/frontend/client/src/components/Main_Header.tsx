@@ -20,10 +20,10 @@ const Main_Header:any= () =>{
             });
     }
 
-    useEffect(() => {
-        fetchSessionInfo();
-      }, []);
-return(
+        useEffect(() => {
+            fetchSessionInfo();
+        }, []);
+    return(
         <div className="Header Wrap">
             <h1><Link to={"/"}>P:LOG</Link></h1>
             <div className="tit">

@@ -3,37 +3,115 @@
     border: none;
     background: none;
   }
-  .f-left{
-    align-items: center;
+  
+  .calendar_entire{
+    box-shadow: 0px 0px 20px 5px rgb(44 80 255 / 5%);
     width: 90%;
     margin: 0 auto;
-  }
+    border-radius: 20px;
+    padding: 5% 3%;
 
-  .cal_top{
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    span{
-      color: #888888;
-      font-size: 15px;
-      margin-left: 10px;
+    .f-left{
+      align-items: center;
+    }
+  
+    .cal_top_wrap{
+      .cal_top{
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        span{
+          color: #888888;
+          font-size: 15px;
+          margin-left: 10px;
+        }
+    
+      }
+    }
+
+  
+    .Calendar_wrap{
+      width: 90%;
+      margin: 5% auto 0; 
+    
+    
+      td{
+        text-align: center;
+        font-size: 25px;
+        padding: 10px 0;
+      }
+      td.blue{
+        color: #2C50FF;
+        font-weight: bold;
+      }
     }
 
   }
 
-  .Calendar_wrap{
+  .state_wrap{
     width: 90%;
-    margin: 5% auto 0; 
+    margin: 0 auto;
+    .tit{
+      margin-top: 20px;
+      font-size: 24px;
+      a{
+        display: block;
+      }
+      p{
+          font-weight: bold;
+          position: relative;
+          display: inline-block;
+          margin-top: 10px;
+          z-index: 2;
   
-  
-    td{
-      text-align: center;
-      font-size: 25px;
-      padding: 10px 0;
+          &::before{
+              content: "";
+              display: block;
+              position: absolute;
+              top: 60%;
+              left: 0;
+              height: 10px;
+              width: 100%;
+              background:#FFF3B2;
+              z-index: -1;
+          }
+      }
     }
-    td.blue{
-      color: #2C50FF;
-      font-weight: bold;
+
+    .state_sli{
+      margin-top: 50px;
+
+      .swiper-slide{
+        background: #2C50FF;
+        color: #fff;
+        border-radius: 20px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 15px;
+
+        div{
+          color: #fff;
+          p{
+            color: #fff;
+          }
+        }
+
+        .content{
+          text-align: right;
+
+          .flex-box{
+            align-items: baseline;
+            justify-content: flex-end;
+          }
+    
+          .kcal, .min, .tem{
+            font-size: 35px;
+          }
+        }
+      }
     }
   }
+  
 }
