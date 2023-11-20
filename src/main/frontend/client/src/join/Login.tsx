@@ -71,9 +71,9 @@ export default function Emotion(){
 
                 <div style={{textAlign:"center"}}>
                     <Btn type='button' onClick={(e)=>{
-                       e.preventDefault();
-                       dataSubmit();
-                   }}>로그인</Btn>
+                        e.preventDefault();
+                        dataSubmit();
+                    }}>로그인</Btn>
                 </div>
 
                 <FlexSt className='f-between linkWrap' style={{margin:"5% auto",  width: "70%"}}>

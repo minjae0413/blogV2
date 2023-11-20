@@ -1,7 +1,39 @@
-.Calendar_wrap{
-  width: 90%;
-  margin: 5% auto 0; 
-  td.blue{
-    color: #2C50FF;
+.MainWrap{
+  button{
+    border: none;
+    background: none;
+  }
+  .f-left{
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .cal_top{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    span{
+      color: #888888;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+
+  }
+
+  .Calendar_wrap{
+    width: 90%;
+    margin: 5% auto 0; 
+  
+  
+    td{
+      text-align: center;
+      font-size: 25px;
+      padding: 10px 0;
+    }
+    td.blue{
+      color: #2C50FF;
+      font-weight: bold;
+    }
   }
 }

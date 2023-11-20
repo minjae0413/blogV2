@@ -14,7 +14,7 @@ const Mypage =()=>{
   return (
     <section className="Mypage">
       <div className='logo'>
-        <img src={logoBlue} alt="로고"/>
+        <Link to={"/"}><img src={logoBlue} alt="로고"/></Link>
         <h2>P:LOG</h2>
       </div>
       <div className='profile'>
