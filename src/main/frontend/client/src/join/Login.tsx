@@ -5,6 +5,7 @@ import { faComment , faN} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import React, { useState ,useEffect } from 'react';
 import axios from "axios";
+import cookie from 'react-cookies';
 import './styles/Join.css';
 
 export default function Emotion(){
@@ -31,7 +32,15 @@ export default function Emotion(){
             },
         })
         .then( response => {
-            //console.log(response);
+            let data = response.data;
+            const expires = new Date()
+            expires.setMinutes(expires.getMinutes() + 60)
+            cookie.save('userid', data.mbId, {
+                path : '/',
+                expires,
+                secure : true,
+                // httpOnly : true
+            });
             navigate("/");
         })
         .catch( error => {

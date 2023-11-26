@@ -5,23 +5,12 @@ import icon02 from "../img/icon02.png";
 import icon03 from "../img/icon03.png";
 import icon04 from "../img/icon04.png";
 import axios from "axios";
+import cookie from 'react-cookies';
 
 const Main_Header:any= () =>{
     const [userId, setUserId] = useState('홍길동');
-
-    const fetchSessionInfo = () => {
-        axios.get('http://localhost:9090/api/member/sessionInfo')
-            .then( response => {
-                console.log(response);
-                //setUserId(response);
-            })
-            .catch( error => {
-                console.log(error);
-            });
-    }
-
     useEffect(() => {
-        fetchSessionInfo();
+        setUserId(cookie.load('userid'));
       }, []);
 return(
         <div className="Header Wrap">
