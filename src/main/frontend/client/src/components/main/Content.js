@@ -11,11 +11,36 @@ import 'swiper/css/free-mode';
 
 const Content = () =>{
 
-    const [heart, setHeart] = useState(true);
+    const [heartStatus, setHeartStatus] = useState([false, false, false]);
 
-    function heartClick(){
-        setHeart( <FontAwesomeIcon icon={faHeart} />);
-    }
+    const handleBookmark = (index) => {
+        const newHeartStatus = [...heartStatus];
+        newHeartStatus[index] = !newHeartStatus[index];
+        setHeartStatus(newHeartStatus);
+    };
+
+    const renderLiveItem = (index, color) => {
+        return (
+        <div className={`f-between b_${color}`} key={index}>
+            <div className="list-con">
+            <p className="list-tit">내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 </p>
+            <div className="f-box">
+                <span>글쓴이</span>
+                <span>0000.00.00</span>
+            </div>
+            </div>
+            <div className="bookMark">
+            <span className="heart" onClick={() => handleBookmark(index)}>
+                {heartStatus[index] ? (
+                <FontAwesomeIcon className="heartLike" size="lg" icon={faHeart} />
+                ) : (
+                <FontAwesomeIcon className="heartLike" size="lg" icon={FaHeartRegular} />
+                )}
+            </span>
+            </div>
+        </div>
+        );
+    };
 
     return (
         
@@ -107,8 +132,8 @@ const Content = () =>{
                     <SwiperSlide><span>#개발2팀빠이팅</span></SwiperSlide>
                     <SwiperSlide><span>#리액트빠이팅</span></SwiperSlide>
                     <SwiperSlide><span>#출근</span></SwiperSlide>
-                    <SwiperSlide><span>#아시안게임빠이팅</span></SwiperSlide>
-                    <SwiperSlide><span>#아시안게임야구우승</span></SwiperSlide>
+                    <SwiperSlide><span>#엘지가우승했지롱~~~~</span></SwiperSlide>
+                    <SwiperSlide><span>#29년만에우승했다~~</span></SwiperSlide>
                 </Swiper>
             </div>
             <div className="BestBlog ov">
@@ -168,42 +193,9 @@ const Content = () =>{
             <div className="live-Best">
                 <h3>실시간 인기 로그</h3>
                 <div className="live-list">
-                    <div className='f-between b_blue3'>
-                        <div className='list-con'>
-                            <p className='list-tit'>개발 2팀 아자아자 빠이팅 !!!</p>
-                            <div className='f-box'>
-                                <span>ㅂㅎㅈ</span>
-                                <span>2023.10.11</span>
-                            </div>
-                        </div>
-                        <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon className="heartLike" size="lg" icon={faHeart} />}</span>
-                        </div>
-                    </div>
-                    <div className='f-between b_beige'>
-                        <div className='list-con'>
-                            <p className='list-tit'>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 </p>
-                            <div className='f-box'>
-                                <span>글쓴이</span>
-                                <span>0000.00.00</span>
-                            </div>
-                        </div>
-                        <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon  className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon size="lg" className="heartLike" icon={faHeart} />}</span>
-                        </div>
-                    </div>
-                    <div className='f-between b_pink'>
-                        <div className='list-con'>
-                            <p className='list-tit'>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 </p>
-                            <div className='f-box'>
-                                <span>글쓴이</span>
-                                <span>0000.00.00</span>
-                            </div>
-                        </div>
-                        <div class="bookMark">
-                            <span className="heart" onClick={ () => setHeart(!heart) }>{heart ? <FontAwesomeIcon className="heartLike" size="lg" icon={FaHeartRegular} /> : <FontAwesomeIcon className="heartLike" size="lg" icon={faHeart} />}</span>
-                        </div>
-                    </div>
+                    {renderLiveItem(0, "blue3")}
+                    {renderLiveItem(1, "beige")}
+                    {renderLiveItem(2, "pink")}
                 </div>
             </div>
         </div>

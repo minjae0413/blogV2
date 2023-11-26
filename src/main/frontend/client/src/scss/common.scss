@@ -51,9 +51,7 @@ a{text-decoration: none;color:#333;}
 .center{left: 50%; top:50%; transform: translate(-50%,-50%)}
 .ir{font-size: 0;color: transparent;line-height: 0;}
 
-.flex-box{
-    display: flex;
-}
+.flex-box{display: flex;}
 
 .Wrap{padding: 0 30px;}
 
@@ -65,6 +63,7 @@ a{text-decoration: none;color:#333;}
 .b_pink{background: #fff6f7;}
 
 .tc{text-align: center;}
+.bold{font-weight: bold;}
 
 .mr-5{margin-right: 5px;}
 .mr-10{margin-right: 10px;}
