@@ -5,7 +5,7 @@ import './styles/Join.css';
 import { Link, useNavigate  } from "react-router-dom";
 
 
-export default function Join(){
+export default function Join (){
     const navigate = useNavigate();
 
     const [id, setId] = useState('');
@@ -100,6 +100,12 @@ export default function Join(){
             });
     }
 
+
+    const [text, setText] = useState('');
+    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setText(event.target.value);
+    }
+    
     return(
         <Wrap className='joinWrap'>
             <Inner>
@@ -168,7 +174,7 @@ export default function Join(){
 
                     <Input>
                         <h3>인증번호를 입력해주세요.</h3>
-                        <EmailInput type="text" value="" placeholder='인증번호를 입력하세요.'/>
+                        <EmailInput type="text" placeholder='인증번호를 입력하세요.' onChange={onChange} value={text}/>
                     </Input>
                 </div>
                 <div className='f-center'>
