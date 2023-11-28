@@ -48,6 +48,22 @@ export default function Emotion(){
         });
     }
 
+    const [pwType, setpwType] = useState({
+        type: "password",
+        visible: false,
+    });
+
+    const handlePasswordType = (e:any) => {
+        setpwType(() => {
+        if (!pwType.visible) {
+            return { type: "text", visible: true };
+        } else {
+            return { type: "password", visible: false };
+        }
+        });
+    };
+
+
     return(
         <Wrap className='loginWrap'>
             <Inner>
@@ -60,10 +76,15 @@ export default function Emotion(){
                             onChange={ (e) => { setId(e.target.value) } }
                         />
                     </Input>
-                    <Input>
-                        <EmailInput type="text" value={pw} placeholder='비밀번호를 입력하세요.'
+                    <Input className='p_r'>
+                        <EmailInput value={pw} placeholder='비밀번호를 입력하세요.'
                             onChange={ (e) => { setPw(e.target.value) } }
+                            type={pwType.type}
+                            required
                         />
+                        <span onClick={handlePasswordType} className='see_pw'>
+                            {pwType.visible ? "비밀번호 숨기기" : "비밀번호 보기"}
+                        </span>
                     </Input>
                 </div>
 

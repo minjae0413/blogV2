@@ -4,6 +4,10 @@ import axios from "axios";
 import './styles/Join.css';
 import { Link, useNavigate  } from "react-router-dom";
 
+interface PasswordType {
+    type: string;
+    visible: boolean;
+}
 
 export default function Join (){
     const navigate = useNavigate();
@@ -100,11 +104,35 @@ export default function Join (){
             });
     }
 
-
     const [text, setText] = useState('');
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setText(event.target.value);
     }
+
+    const [pwType, setPwType] = useState<{ pw: PasswordType; pwchk: PasswordType }>({
+        pw: { type: "password", visible: false },
+        pwchk: { type: "password", visible: false },
+    });
+
+    const handlePasswordTypePw = () => {
+        setPwType((prev) => ({
+        ...prev,
+        pw: {
+            type: prev.pw.visible ? "password" : "text",
+            visible: !prev.pw.visible,
+        },
+        }));
+    };
+    
+    const handlePasswordTypePwchk = () => {
+        setPwType((prev) => ({
+        ...prev,
+        pwchk: {
+            type: prev.pwchk.visible ? "password" : "text",
+            visible: !prev.pwchk.visible,
+        },
+        }));
+    };
     
     return(
         <Wrap className='joinWrap'>
@@ -117,17 +145,32 @@ export default function Join (){
                         <EmailInput type="text" value={id} placeholder='아이디를 입력하세요.'
                             onChange={ (e) => { setId(e.target.value) } }/>
                     </Input>
-                    <Input>
+
+                    <Input className='p_r'>
                         <h3>비밀번호 입력해주세요.</h3>
-                        <EmailInput type="password" value={pw} placeholder='6-20자 영문,숫자 특수문자를 조합해서 입력해 주세요.'
-                            onChange={ (e) => { setPw(e.target.value) } }/>
+                        <div className="p_r">
+                        <EmailInput
+                            type={pwType.pw.type}
+                            value={pw}
+                            placeholder='6-20자 영문,숫자 특수문자를 조합해서 입력해 주세요.'
+                            onChange={(e) => { setPw(e.target.value) }}
+                            required
+                        />
+                        <span onClick={handlePasswordTypePw} className='see_pw join'>
+                            {pwType.pw.visible ? "비밀번호 숨기기" : "비밀번호 보기"}
+                        </span>
+                        </div>
                     </Input>
-                    <Input>
+                    
+                    <Input className='p_r'>
                         <h3>비밀번호 다시 입력해주세요.</h3>
-                        <EmailInput type="password" value={pwchk} placeholder='입력하신 비밀번호와 동일하게 입력해 주세요.'
-                            onChange={ (e) => {setPwChk(e.target.value)} }/>
-                            <p className="mt-5" style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
+                        <EmailInput value={pwchk} placeholder='입력하신 비밀번호와 동일하게 입력해 주세요.'
+                            onChange={ (e) => {setPwChk(e.target.value)} }
+                            type='password'
+                            required/>
+                        <p className="mt-5" style={{color:"#FF0000",fontSize:"12px"}}> 동일한 비밀번호를 입력해주세요. </p>
                     </Input>
+
                     <Input>
                         <h3>이메일을 입력해주세요.</h3>
                         <FlexSt>
@@ -188,5 +231,5 @@ export default function Join (){
         </Wrap>
 
     )
-}
 
+}
