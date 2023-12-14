@@ -12,6 +12,7 @@ interface PasswordType {
 export default function Join (){
     const navigate = useNavigate();
 
+    const [name, setName] = useState('');
     const [id, setId] = useState('');
     const [pw, setPw] = useState('');
     const [pwchk, setPwChk] = useState('');
@@ -51,6 +52,11 @@ export default function Join (){
     */
 
     const dataSubmit = () => {
+        if (name == '') {
+            console.log("name");
+            return false;
+        }
+
         if (id == '') {
             console.log("id");
             return false;
@@ -140,6 +146,11 @@ export default function Join (){
                 <Link to={"/"} className="prevBtn">이전 페이지</Link>
                 <Tit>정보입력</Tit>
                 <div>
+                    <Input>
+                        <h3>이름을 입력해주세요.</h3>
+                        <EmailInput type="text" value={name} placeholder='이름을 입력하세요.'
+                            onChange={ (e) => { setName(e.target.value) } }/>
+                    </Input>
                     <Input>
                         <h3>아이디 입력해주세요.</h3>
                         <EmailInput type="text" value={id} placeholder='아이디를 입력하세요.'
