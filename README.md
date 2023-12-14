@@ -181,3 +181,19 @@ Password: 암호는 프로젝트 참여자에 한하여 공유함.
 7, 실행 후, local 페이지로 이동되어 작동하는지 확인 필요.
 ````
 - 추가로 controller 확인.
+
+## 개발환경 세팅
+
+vscode 추가 인스톨 
+1. Extension Pack for Java
+2. Spring Boot Extension Pack
+
+깃파일 기준 경로 
+src\main\java\com\blog\blog\BlogApplication.java <- 여기로 이동
+
+실행 버튼
+->  [F5] 혹은 우측 상단에 Run Java 
+
+9090으로 새로 창 
+
+http://localhost:9090/api/hello
