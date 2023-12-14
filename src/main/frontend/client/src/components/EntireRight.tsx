@@ -12,6 +12,7 @@ import BoardEditor from "./board/BoardEditor";
 import WeatherMain from "./weather/WeatherMain";
 import CalorieMain from "./calorie/CalorieMain";
 import Calendar from "./calendar/Calendar";
+import UploadStory from "./story/UploadStory";
 
 
 import mainLogo from "../img/logo.png";
@@ -34,6 +35,13 @@ const Entire_right = () =>{
             <Route path="/findID" element={<FindID />} />
             <Route path="/findPW" element={<FindPW />} />
             <Route path="/testapi" element={<Testapi />} />
+            <Route path="/uploadstory" element={
+              <div>
+                <Main_Header/>
+                <UploadStory />
+                <Footer/>
+              </div>
+            } />
             <Route path="/writeForm" element={
               <>
                 <Main_Header/>

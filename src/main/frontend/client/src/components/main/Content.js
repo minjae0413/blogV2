@@ -5,6 +5,9 @@ import {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as FaHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Story from "../story/Story";
+import UploadStory from '../story/UploadStory'
+import YourStoryLink from '../story/YourStoryLink'; 
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -145,48 +148,33 @@ const Content = () =>{
                     modules={[FreeMode]}
                 >
                     <SwiperSlide>
-                        <Link>
-                            <div className="thumbnail">
-                                <img src="" alt="" />
-                            </div>
-                            <dl>
-                                <dt>타이틀</dt>
-                                <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
-                            </dl>
-                        </Link>
+                        <div>
+                            <YourStoryLink />
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link>
-                            <div className="thumbnail">
-                                <img src="" alt="" />
-                            </div>
-                            <dl>
-                                <dt>타이틀</dt>
-                                <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
-                            </dl>
-                        </Link>
+                       <Story
+                       url='https://item.kakaocdn.net/do/58119590d6204ebd70e97763ca933baf9f5287469802eca457586a25a096fd31'
+                       title='헤어나올 수가 없네'
+                       contents='#잔망루피#귀엽다'
+                       > 
+                       </Story>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link>
-                            <div className="thumbnail">
-                                <img src="" alt="" />
-                            </div>
-                            <dl>
-                                <dt>타이틀</dt>
-                                <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
-                            </dl>
-                        </Link>
+                        <Story
+                       url='https://cdn.imweb.me/upload/S20210809c06cc49e8b65a/e8736944f1dc5.png'
+                       title='귀여운 나'
+                       contents='#귀여운나 #뎬댱 #나 #이미지포지션어케'
+                       > 
+                       </Story>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Link>
-                            <div className="thumbnail">
-                                <img src="" alt="" />
-                            </div>
-                            <dl>
-                                <dt>타이틀</dt>
-                                <dd>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</dd>
-                            </dl>
-                        </Link>
+                        <Story
+                       url='https://cdn.imweb.me/thumbnail/20220504/b3cfa3b5bc931.jpg'
+                       title='다들 용서 안해요 얼른 해라 ~!'
+                       contents='#블로그 #빨리해라 #조민재 #황승아 #서종주 #위건 #이은경'
+                       > 
+                       </Story>
                     </SwiperSlide>
                 </Swiper>
             </div>

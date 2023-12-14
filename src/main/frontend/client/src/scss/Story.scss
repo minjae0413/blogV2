@@ -1,0 +1,49 @@
+.thumbnail{
+    width: 30%;
+    margin: 0 auto 20px;
+}
+
+dl{
+    text-align: center;
+    dd{
+        margin-bottom: 20px;
+        text-align: left;
+    }
+}
+
+.uploadstory{
+    width: 90%;
+    margin: 0 auto 10%;
+    div{
+        margin: 5px 0;
+        label, p.label{
+            width: 20%;
+            display: inline-block;
+        }
+        input, textarea{
+            width: 80%;
+            border: 1px solid #ddd;
+        }
+
+        #file{
+            border: none;
+        }
+
+        input[type=file]::file-selector-button {
+            width: 150px;
+            height: 30px;
+            background: #075FDB;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            &:hover {
+              background: #FFD703;
+              color: #fff;
+            }
+        }    
+    }
+    .submit{
+        margin: 20px 0;
+    }
+}
