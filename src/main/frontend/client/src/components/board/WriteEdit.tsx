@@ -4,10 +4,22 @@ import "react-quill/dist/quill.snow.css";
 
 
 const WriteEdit = () =>{
+    let time={
+        year: new Date().getFullYear(),
+        month: String(new Date().getMonth()+1).padStart(2,'0'),
+        date: String(new Date().getDate()).padStart(2,'0'),
+        hours: String(new Date().getHours()).padStart(2,'0'),
+        minutes: String(new Date().getMinutes()).padStart(2,'0'),
+        seconds: String(new Date().getSeconds()).padStart(2,'0'),
+    }
+
+    let now = `${time.year}.${time.month}.${time.date} ${time.hours}:${time.minutes}:${time.seconds}`;
+    
     const  [ value ,  setValue ]  =  useState ({
         name:"",
         title:"",
         content:"",
+        id:"now",
     }) ;
 
     const handleChangeBoard =(e:any)=>{
