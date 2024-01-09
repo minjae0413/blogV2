@@ -14,12 +14,12 @@ const WriteEdit = () =>{
     }
 
     let now = `${time.year}.${time.month}.${time.date} ${time.hours}:${time.minutes}:${time.seconds}`;
-    
+
     const  [ value ,  setValue ]  =  useState ({
         name:"",
         title:"",
         content:"",
-        id:"now",
+        id : now,
     }) ;
 
     const handleChangeBoard =(e:any)=>{
