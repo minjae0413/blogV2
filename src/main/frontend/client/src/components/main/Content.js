@@ -12,7 +12,7 @@ import YourStoryLink from '../story/YourStoryLink';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-const Content = () =>{
+const Content = ({story,setStory,imagePreview,setImagePreview}) =>{
 
     const [heartStatus, setHeartStatus] = useState([false, false, false]);
 
@@ -149,32 +149,49 @@ const Content = () =>{
                 >
                     <SwiperSlide>
                         <div>
-                            <YourStoryLink />
+                            <YourStoryLink story={story} setStory={setStory} imagePreview={imagePreview} setImagePreview={setImagePreview}/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                       <Story
-                       url='https://item.kakaocdn.net/do/58119590d6204ebd70e97763ca933baf9f5287469802eca457586a25a096fd31'
-                       title='헤어나올 수가 없네'
-                       contents='#잔망루피#귀엽다'
-                       > 
-                       </Story>
+                        {
+                            story && story.map((i, index) => {
+                                return (
+                                <Link className={`story${index}`} key={index}>
+                                    <div className="thumbnail">
+                                        <img src={i.url} alt="" />
+                                    </div>
+                                    <dl>
+                                        <dt>{i.title}</dt>
+                                        <dd>{i.contents}</dd>
+                                    </dl>
+                                </Link>
+                                );
+                            })
+                        }
                     </SwiperSlide>
                     <SwiperSlide>
                         <Story
-                       url='https://cdn.imweb.me/upload/S20210809c06cc49e8b65a/e8736944f1dc5.png'
-                       title='귀여운 나'
-                       contents='#귀여운나 #뎬댱 #나 #이미지포지션어케'
-                       > 
-                       </Story>
+                        url='https://item.kakaocdn.net/do/58119590d6204ebd70e97763ca933baf9f5287469802eca457586a25a096fd31'
+                        title='헤어나올 수가 없네'
+                        contents='#잔망루피#귀엽다'
+                        > 
+                        </Story>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Story
-                       url='https://cdn.imweb.me/thumbnail/20220504/b3cfa3b5bc931.jpg'
-                       title='다들 용서 안해요 얼른 해라 ~!'
-                       contents='#블로그 #빨리해라 #조민재 #황승아 #서종주 #위건 #이은경'
-                       > 
-                       </Story>
+                        url='https://cdn.imweb.me/upload/S20210809c06cc49e8b65a/e8736944f1dc5.png'
+                        title='귀여운 나'
+                        contents='#귀여운나 #뎬댱 #나 #이미지포지션어케'
+                        > 
+                        </Story>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Story
+                        url='https://cdn.imweb.me/thumbnail/20220504/b3cfa3b5bc931.jpg'
+                        title='다들 용서 안해요 얼른 해라 ~!'
+                        contents='#블로그 #빨리해라 #조민재 #황승아 #서종주 #위건 #이은경'
+                        > 
+                        </Story>
                     </SwiperSlide>
                 </Swiper>
             </div>

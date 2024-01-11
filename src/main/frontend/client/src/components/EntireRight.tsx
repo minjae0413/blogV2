@@ -13,11 +13,14 @@ import WeatherMain from "./weather/WeatherMain";
 import CalorieMain from "./calorie/CalorieMain";
 import Calendar from "./calendar/Calendar";
 import UploadStory from "./story/UploadStory";
+import { useState } from "react";
 
 
 import mainLogo from "../img/logo.png";
 
 const Entire_right = () =>{
+  const [story, setStory] = useState({ title: '', content: '', image: null });
+  const [imagePreview, setImagePreview] = useState(null);
 
     return(
         <div className='entire_right'>
@@ -38,7 +41,12 @@ const Entire_right = () =>{
             <Route path="/uploadstory" element={
               <div>
                 <Main_Header/>
-                <UploadStory />
+                <UploadStory
+                  story={story}
+                  setStory={setStory}
+                  imagePreview={imagePreview}
+                  setImagePreview={setImagePreview}
+                />
                 <Footer/>
               </div>
             } />

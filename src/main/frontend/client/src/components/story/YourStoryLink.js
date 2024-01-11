@@ -4,9 +4,9 @@ import icon05 from "../../img/icon05X4.png";
 import '../../scss/Story.scss';
 
 
-const YourStoryLink = () => {
+const YourStoryLink = ({story,setStory,imagePreview,setImagePreview}) => {
   return (
-    <Link to={'/uploadstory'}>
+    <Link to={'/uploadstory'} story={story} setStory={setStory} imagePreview={imagePreview} setImagePreview={setImagePreview}>
       <div className="thumbnail">
         <img src={icon05} alt="" />
       </div>

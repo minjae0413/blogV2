@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-const StoryUploadForm = () => {
-  const [story, setStory] = useState({ title: '', content: '', image: null });
-  const [imagePreview, setImagePreview] = useState(null);
+const StoryUploadForm = ({story,setStory,imagePreview,setImagePreview}) => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -19,7 +17,8 @@ const StoryUploadForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();console.log('Story submitted:', story);
+    e.preventDefault();
+    console.log('Story submitted:', story);
     setStory({ title: '', content: '', image: null });
     setImagePreview(null);
   };
@@ -47,7 +46,7 @@ const StoryUploadForm = () => {
           <img src={imagePreview} alt="Preview" />
         </div>
       )}
-        <div class="t-c submit">
+        <div className="t-c submit">
             <button type="submit">Submit</button>
         </div>
     </form>
